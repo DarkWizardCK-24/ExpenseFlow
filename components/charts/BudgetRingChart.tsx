@@ -63,13 +63,13 @@ export const BudgetRingChart: React.FC<BudgetRingChartProps> = ({
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
           <span
-            className={`text-3xl font-black tabular-nums tracking-tight ${
+            className={`text-2xl sm:text-3xl font-bold tabular-nums tracking-tight ${
               isOverBudget ? 'text-red-600' : 'text-[#0b3b2e]'
             }`}
           >
             {usedPercent}%
           </span>
-          <span className="text-[11px] font-semibold text-[#64748b]">of budget used</span>
+          <span className="text-[11px] font-medium text-[#64748b]">of budget used</span>
         </div>
       </div>
 
@@ -78,20 +78,20 @@ export const BudgetRingChart: React.FC<BudgetRingChartProps> = ({
         <dl className="space-y-2 text-sm">
           <div className="flex items-baseline justify-between gap-3">
             <dt className="text-[#64748b]">Spent this month</dt>
-            <dd className="font-bold tabular-nums text-[#0b3b2e]">{formatCurrency(spent, currency)}</dd>
+            <dd className="font-medium tabular-nums text-[#0b3b2e]">{formatCurrency(spent, currency)}</dd>
           </div>
           <div className="flex items-baseline justify-between gap-3">
             <dt className="text-[#64748b]">Monthly budget</dt>
-            <dd className="font-bold tabular-nums text-[#0b3b2e]">
+            <dd className="font-medium tabular-nums text-[#0b3b2e]">
               {hasBudget ? formatCurrency(budget, currency) : 'Not set'}
             </dd>
           </div>
           <div className="flex items-baseline justify-between gap-3 pt-2 border-t border-slate-100">
-            <dt className={`font-semibold ${isOverBudget ? 'text-red-600' : 'text-emerald-700'}`}>
+            <dt className={`font-medium ${isOverBudget ? 'text-red-600' : 'text-emerald-700'}`}>
               {isOverBudget ? 'Over budget by' : 'Left to spend'}
             </dt>
             <dd
-              className={`text-base font-extrabold tabular-nums ${
+              className={`text-sm sm:text-base font-semibold tabular-nums ${
                 isOverBudget ? 'text-red-600' : 'text-emerald-700'
               }`}
             >

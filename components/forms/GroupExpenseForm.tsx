@@ -197,7 +197,7 @@ export const GroupExpenseForm: React.FC<GroupExpenseFormProps> = ({
           Total bill
         </span>
         <div className="mt-1 flex items-center justify-center gap-1">
-          <span className="text-2xl font-bold text-emerald-600">{currencySymbol}</span>
+          <span className="text-2xl font-semibold text-emerald-600">{currencySymbol}</span>
           <input
             type="number"
             inputMode="decimal"
@@ -206,7 +206,7 @@ export const GroupExpenseForm: React.FC<GroupExpenseFormProps> = ({
             autoFocus={!isEdit}
             aria-label="Total bill amount"
             {...register('amount')}
-            className="w-full max-w-[220px] bg-transparent text-center text-4xl font-black tracking-tight text-[#0b3b2e] placeholder-slate-300 outline-none tabular-nums [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+            className="w-full max-w-[220px] bg-transparent text-center text-3xl sm:text-4xl font-bold tracking-tight text-[#0b3b2e] placeholder-slate-300 outline-none tabular-nums [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             style={{ colorScheme: 'light' }}
           />
         </div>

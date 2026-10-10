@@ -21,7 +21,7 @@ export default function RootPage() {
       <div className="w-16 h-16 rounded-3xl bg-gradient-to-tr from-[#047857] to-[#10b981] flex items-center justify-center text-white shadow-emerald-lg">
         <Wallet className="w-8 h-8" />
       </div>
-      <h1 className="mt-4 text-2xl font-extrabold tracking-tight text-[#0b3b2e]">ExpenseFlow</h1>
+      <h1 className="mt-4 text-2xl font-bold tracking-tight text-[#0b3b2e]">ExpenseFlow</h1>
       <p className="mt-1 text-sm text-[#64748b] text-center">
         Track spending, split bills and reach your goals.
       </p>

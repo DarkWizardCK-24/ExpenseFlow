@@ -109,7 +109,7 @@ export const ExpenseCard: React.FC<ExpenseCardProps> = ({
 
           {/* Title + meta */}
           <div className="min-w-0 flex-1">
-            <h4 className="font-semibold text-sm text-[#0b3b2e] truncate">{transaction.title}</h4>
+            <h4 className="font-medium text-sm text-[#0b3b2e] truncate">{transaction.title}</h4>
             <div className="flex items-center gap-1.5 mt-1 text-xs text-[#64748b] min-w-0">
               <span className="flex items-center gap-1 min-w-0">
                 <span
@@ -145,7 +145,7 @@ export const ExpenseCard: React.FC<ExpenseCardProps> = ({
           {/* Amount + actions (stacked on mobile, inline on larger screens) */}
           <div className="flex flex-col sm:flex-row items-end sm:items-center gap-0.5 sm:gap-3 flex-shrink-0">
             <span
-              className={`text-sm sm:text-base font-bold tabular-nums whitespace-nowrap ${
+              className={`text-sm sm:text-base font-semibold tabular-nums whitespace-nowrap ${
                 isIncome ? 'text-emerald-600' : 'text-rose-600'
               }`}
             >

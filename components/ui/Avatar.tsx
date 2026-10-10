@@ -15,10 +15,10 @@ export const Avatar: React.FC<AvatarProps> = ({
   className = '',
 }) => {
   const sizeClasses = {
-    sm: 'w-8 h-8 text-xs font-bold',
-    md: 'w-10 h-10 text-sm font-bold',
-    lg: 'w-14 h-14 text-lg font-extrabold',
-    xl: 'w-20 h-20 text-2xl font-black',
+    sm: 'w-8 h-8 text-xs font-semibold',
+    md: 'w-10 h-10 text-sm font-semibold',
+    lg: 'w-14 h-14 text-lg font-semibold',
+    xl: 'w-20 h-20 text-2xl font-bold',
   };
 
   const gradient = getAvatarGradient(name || 'ExpenseFlow');

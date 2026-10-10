@@ -89,7 +89,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
             <button onClick={() => setCurrentMonth(subMonths(currentMonth, 1))} className={navBtn} aria-label="Previous month">
               <ChevronLeft className="w-4 h-4" />
             </button>
-            <h3 className="text-base font-bold text-[#0b3b2e] min-w-[128px] text-center">
+            <h3 className="text-sm sm:text-base font-semibold text-[#0b3b2e] min-w-[128px] text-center">
               {format(currentMonth, 'MMMM yyyy')}
             </h3>
             <button onClick={() => setCurrentMonth(addMonths(currentMonth, 1))} className={navBtn} aria-label="Next month">
@@ -177,7 +177,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
       <div className="bg-white rounded-2xl shadow-card border border-slate-100 p-4 sm:p-5 space-y-3">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
-            <h4 className="font-bold text-sm text-[#0b3b2e]">{format(selectedDay, 'EEEE, MMM d')}</h4>
+            <h4 className="font-semibold text-sm text-[#0b3b2e]">{format(selectedDay, 'EEEE, MMM d')}</h4>
             <p className="text-xs text-[#64748b]">
               {selectedDayTxs.length} transaction{selectedDayTxs.length === 1 ? '' : 's'}
             </p>

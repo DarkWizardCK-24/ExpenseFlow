@@ -81,7 +81,7 @@ export default function BudgetAndGoalsPage() {
       {/* Page header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div className="min-w-0">
-          <h1 className="text-2xl font-bold tracking-tight text-[#0b3b2e]">Budget &amp; Goals</h1>
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0b3b2e]">Budget &amp; Goals</h1>
           <p className="text-sm text-[#64748b] mt-0.5">
             {format(now, 'MMMM yyyy')} · keep spending in check and grow your savings
           </p>
@@ -102,7 +102,7 @@ export default function BudgetAndGoalsPage() {
         <section className="lg:col-span-3 bg-white rounded-2xl border border-slate-100 shadow-card p-5 sm:p-6">
           <div className="flex items-start justify-between gap-3 mb-5">
             <div>
-              <h2 className="text-base font-bold text-[#0b3b2e]">Monthly budget</h2>
+              <h2 className="text-sm sm:text-base font-semibold text-[#0b3b2e]">Monthly budget</h2>
               <p className="text-xs text-[#64748b] mt-0.5">Spending so far this month vs your limit</p>
             </div>
             {monthlyBudget > 0 && (
@@ -147,7 +147,7 @@ export default function BudgetAndGoalsPage() {
         <section className="lg:col-span-2 bg-white rounded-2xl border border-slate-100 shadow-card p-5 sm:p-6">
           <div className="flex items-start justify-between gap-3 mb-4">
             <div>
-              <h2 className="text-base font-bold text-[#0b3b2e]">Where it went</h2>
+              <h2 className="text-sm sm:text-base font-semibold text-[#0b3b2e]">Where it went</h2>
               <p className="text-xs text-[#64748b] mt-0.5">Spending by category this month</p>
             </div>
           </div>
@@ -283,7 +283,7 @@ function GoalsSection({
     <section className="space-y-4">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="text-lg font-bold text-[#0b3b2e]">Savings goals</h2>
+          <h2 className="text-base sm:text-lg font-semibold text-[#0b3b2e]">Savings goals</h2>
           <p className="text-xs text-[#64748b] mt-0.5 tabular-nums">
             {loading || goals.length === 0 ? (
               'Things you are saving up for'

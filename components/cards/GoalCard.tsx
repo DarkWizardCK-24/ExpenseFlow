@@ -87,7 +87,7 @@ export const GoalCard: React.FC<GoalCardProps> = ({
             <div className="min-w-0 flex-1">
               <Link
                 href={`/goals/${goal.id}`}
-                className="block font-bold text-[15px] text-[#0b3b2e] leading-snug truncate hover:text-emerald-700 focus:outline-none focus-visible:underline"
+                className="block font-semibold text-sm text-[#0b3b2e] leading-snug truncate hover:text-emerald-700 focus:outline-none focus-visible:underline"
               >
                 {goal.name}
               </Link>
@@ -106,7 +106,7 @@ export const GoalCard: React.FC<GoalCardProps> = ({
               </div>
             </div>
             <span
-              className={`text-lg font-black tabular-nums ${isCompleted ? 'text-emerald-600' : 'text-[#0b3b2e]'}`}
+              className={`text-base sm:text-lg font-bold tabular-nums ${isCompleted ? 'text-emerald-600' : 'text-[#0b3b2e]'}`}
             >
               {percentage}%
             </span>
@@ -117,7 +117,7 @@ export const GoalCard: React.FC<GoalCardProps> = ({
             <Progress value={percentage} max={100} variant="emerald" height="md" />
             <div className="mt-2 flex items-baseline justify-between gap-2 text-xs tabular-nums">
               <span>
-                <span className="font-bold text-[#0b3b2e]">{formatCurrency(goal.saved, currency)}</span>
+                <span className="font-semibold text-[#0b3b2e]">{formatCurrency(goal.saved, currency)}</span>
                 <span className="text-[#64748b]"> of {formatCurrency(goal.target, currency)}</span>
               </span>
               <span className="text-[#64748b] truncate">
@@ -131,7 +131,7 @@ export const GoalCard: React.FC<GoalCardProps> = ({
             <button
               type="button"
               onClick={() => onAddFunds(goal)}
-              className="inline-flex items-center gap-1.5 h-9 px-3 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200/60 text-xs font-bold hover:bg-emerald-100 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+              className="inline-flex items-center gap-1.5 h-9 px-3 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200/60 text-xs font-semibold hover:bg-emerald-100 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
             >
               <Plus className="w-3.5 h-3.5" />
               Add funds

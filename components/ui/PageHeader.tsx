@@ -19,8 +19,8 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 }) => (
   <div className={`flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 sm:gap-4 ${className}`}>
     <div className="min-w-0">
-      {eyebrow && <p className="text-xs font-semibold text-emerald-700 mb-1">{eyebrow}</p>}
-      <h1 className="text-2xl sm:text-[28px] font-extrabold tracking-tight text-[#0b3b2e] leading-tight">
+      {eyebrow && <p className="text-xs font-medium text-emerald-700/90 mb-1 tracking-wide">{eyebrow}</p>}
+      <h1 className="text-2xl sm:text-[26px] font-bold tracking-tight text-[#0b3b2e] leading-tight">
         {title}
       </h1>
       {subtitle && <p className="text-sm text-[#64748b] mt-1">{subtitle}</p>}
@@ -39,7 +39,7 @@ interface SectionHeaderProps {
 export const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle, action, className = '' }) => (
   <div className={`flex items-start justify-between gap-3 ${className}`}>
     <div className="min-w-0">
-      <h2 className="text-base font-bold text-[#0b3b2e]">{title}</h2>
+      <h2 className="text-sm sm:text-base font-semibold text-[#0b3b2e]">{title}</h2>
       {subtitle && <p className="text-xs text-[#64748b] mt-0.5">{subtitle}</p>}
     </div>
     {action && <div className="flex-shrink-0">{action}</div>}

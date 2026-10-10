@@ -103,7 +103,7 @@ export default function LoginPage() {
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#047857] to-[#10b981] flex items-center justify-center text-white shadow-emerald-lg mb-3">
             <Wallet className="w-7 h-7" />
           </div>
-          <h1 className="text-2xl font-black text-[#0b3b2e]">Sign In to ExpenseFlow</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-[#0b3b2e]">Sign In to ExpenseFlow</h1>
           <p className="text-xs text-[#64748b] mt-1">
             Access your financial dashboard, split bills, and savings goals
           </p>
@@ -114,7 +114,7 @@ export default function LoginPage() {
           <div className="flex items-center gap-2.5">
             <Sparkles className="w-4 h-4 text-emerald-600 flex-shrink-0" />
             <div className="text-left">
-              <p className="text-xs font-bold text-[#0b3b2e]">Explore Instant Demo</p>
+              <p className="text-xs font-semibold text-[#0b3b2e]">Explore Instant Demo</p>
               <p className="text-[11px] text-[#64748b]">Try with pre-loaded transactions and groups</p>
             </div>
           </div>

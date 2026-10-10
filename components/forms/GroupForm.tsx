@@ -58,7 +58,7 @@ const EMOJI_OPTIONS = ['✈️', '🏖️', '🏔️', '🏡', '🍕', '🍻', '
 
 const SectionLabel: React.FC<{ children: React.ReactNode; hint?: string }> = ({ children, hint }) => (
   <div className="flex items-baseline justify-between gap-2">
-    <span className="block text-xs font-semibold uppercase tracking-wider text-emerald-900">
+    <span className="block text-xs font-medium text-emerald-950">
       {children}
     </span>
     {hint && <span className="text-[11px] text-[#64748b]">{hint}</span>}
@@ -277,7 +277,7 @@ export const GroupForm: React.FC<GroupFormProps> = ({
             <li className="flex items-center gap-2.5 p-2 pr-3 rounded-xl bg-emerald-50/70 border border-emerald-100">
               <Avatar name="You" size="sm" className="!rounded-full !shadow-none !border-0" />
               <span className="flex-1 text-sm font-semibold text-emerald-900">You</span>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700">Owner</span>
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-700">Owner</span>
             </li>
           )}
 

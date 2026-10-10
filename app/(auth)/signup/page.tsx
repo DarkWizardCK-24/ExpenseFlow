@@ -111,7 +111,7 @@ export default function SignupPage() {
           <div className="w-13 h-13 rounded-2xl bg-gradient-to-tr from-[#047857] to-[#10b981] flex items-center justify-center text-white shadow-emerald-lg mb-2.5">
             <Wallet className="w-6 h-6" />
           </div>
-          <h1 className="text-2xl font-black text-[#0b3b2e]">Create Your Account</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-[#0b3b2e]">Create Your Account</h1>
           <p className="text-xs text-[#64748b] mt-1">
             Fill in your details to set up your personal ExpenseFlow vault
           </p>
@@ -125,10 +125,10 @@ export default function SignupPage() {
             className="border-2 border-white shadow-md ring-2 ring-emerald-300"
           />
           <div className="min-w-0">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-800">
               Your Unique Avatar
             </span>
-            <p className="text-sm font-bold text-[#0b3b2e] truncate">
+            <p className="text-sm font-semibold text-[#0b3b2e] truncate">
               {enteredName ? enteredName : 'Type your full name below'}
             </p>
             <p className="text-[11px] text-[#64748b]">

@@ -119,7 +119,7 @@ export const SettleUpForm: React.FC<SettleUpFormProps> = ({
             placeholder="0"
             aria-label="Settlement amount"
             {...register('amount')}
-            className="w-full max-w-[200px] bg-transparent text-center text-4xl font-black tracking-tight text-[#0b3b2e] placeholder-slate-300 outline-none tabular-nums [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+            className="w-full max-w-[200px] bg-transparent text-center text-3xl sm:text-4xl font-bold tracking-tight text-[#0b3b2e] placeholder-slate-300 outline-none tabular-nums [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             style={{ colorScheme: 'light' }}
           />
         </div>
@@ -131,7 +131,7 @@ export const SettleUpForm: React.FC<SettleUpFormProps> = ({
       {/* Suggestions */}
       {suggestions.length > 0 && (
         <div className="space-y-2">
-          <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-900">
+          <span className="flex items-center gap-1.5 text-xs font-medium text-emerald-950">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> Suggested
           </span>
           <div className="space-y-1.5">

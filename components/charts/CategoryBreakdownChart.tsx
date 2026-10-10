@@ -68,7 +68,7 @@ export const CategoryBreakdownChart: React.FC<CategoryBreakdownChartProps> = ({
                   const pct = (item.value / total) * 100;
                   return (
                     <div className="bg-white p-2.5 rounded-xl shadow-lg border border-slate-100 text-xs">
-                      <p className="font-bold text-[#0b3b2e] flex items-center gap-1.5">
+                      <p className="font-semibold text-[#0b3b2e] flex items-center gap-1.5">
                         <span>{item.emoji}</span>
                         <span>{item.name}</span>
                       </p>
@@ -100,7 +100,7 @@ export const CategoryBreakdownChart: React.FC<CategoryBreakdownChartProps> = ({
 
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
           <span className="text-[11px] font-medium text-[#64748b]">Total spent</span>
-          <span className="text-base font-extrabold text-[#0b3b2e] tabular-nums">
+          <span className="text-sm sm:text-base font-bold text-[#0b3b2e] tabular-nums">
             {formatCurrency(total, currency)}
           </span>
         </div>

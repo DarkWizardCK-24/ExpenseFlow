@@ -410,10 +410,10 @@ function Stat({ label, value, tone }: { label: string; value: string; tone?: 'em
   const color = tone === 'emerald' ? 'text-emerald-700' : tone === 'amber' ? 'text-amber-700' : 'text-[#0b3b2e]';
   return (
     <div className="rounded-xl bg-slate-50/80 border border-slate-100 p-2.5 sm:p-3 min-w-0">
-      <span className="block text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#64748b]">
+      <span className="block text-[10px] sm:text-[11px] font-medium uppercase tracking-wider text-[#64748b]">
         {label}
       </span>
-      <span className={`block mt-0.5 text-sm sm:text-lg font-extrabold tabular-nums truncate ${color}`}>{value}</span>
+      <span className={`block mt-0.5 text-sm sm:text-base font-semibold tabular-nums truncate ${color}`}>{value}</span>
     </div>
   );
 }

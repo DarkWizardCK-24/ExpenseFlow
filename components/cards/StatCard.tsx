@@ -59,7 +59,7 @@ const ChangeBadge: React.FC<{
   return (
     <span className="inline-flex items-center gap-1.5 text-xs text-[#64748b]">
       <span
-        className={`inline-flex items-center gap-0.5 font-bold px-1.5 py-0.5 rounded-md tabular-nums ${color}`}
+        className={`inline-flex items-center gap-0.5 font-medium px-1.5 py-0.5 rounded-md tabular-nums ${color}`}
       >
         <Icon className="w-3 h-3" aria-hidden="true" />
         {Math.abs(change)}%
@@ -94,7 +94,7 @@ export const StatCard: React.FC<StatCardProps> = ({
       >
         <div aria-hidden="true" className="absolute -right-10 -bottom-12 w-44 h-44 rounded-full bg-white/10 blur-2xl pointer-events-none" />
         <div className="flex items-center justify-between mb-4 relative">
-          <span className="text-xs font-semibold text-emerald-100">{title}</span>
+          <span className="text-xs font-medium text-emerald-100">{title}</span>
           <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center text-white border border-white/15">
             {icon}
           </div>
@@ -103,7 +103,7 @@ export const StatCard: React.FC<StatCardProps> = ({
           {loading ? (
             <Skeleton className="h-9 w-40 bg-white/20" />
           ) : (
-            <p className="text-3xl font-black tracking-tight tabular-nums">{value}</p>
+            <p className="text-2xl sm:text-3xl font-bold tracking-tight tabular-nums">{value}</p>
           )}
           <div className="flex items-center gap-2 mt-2 flex-wrap min-h-[22px]">
             {changePercent !== undefined && !loading && (
@@ -123,7 +123,7 @@ export const StatCard: React.FC<StatCardProps> = ({
       className={`rounded-2xl p-4 sm:p-5 bg-white border border-emerald-100/80 shadow-card hover:shadow-card-hover transition-shadow duration-200 flex flex-col gap-3 min-w-0 ${className}`}
     >
       <div className="flex items-center justify-between gap-2">
-        <span className="text-xs sm:text-sm font-semibold text-[#64748b] truncate">{title}</span>
+        <span className="text-xs sm:text-sm font-medium text-[#64748b] truncate">{title}</span>
         <div className={`w-9 h-9 rounded-xl border flex items-center justify-center flex-shrink-0 [&_svg]:w-[18px] [&_svg]:h-[18px] ${t.icon}`}>
           {icon}
         </div>
@@ -138,7 +138,7 @@ export const StatCard: React.FC<StatCardProps> = ({
         ) : (
           <>
             <p
-              className={`text-xl sm:text-2xl font-extrabold tracking-tight tabular-nums truncate ${
+              className={`text-lg sm:text-xl font-semibold tracking-tight tabular-nums truncate ${
                 colorValue ? t.value : 'text-[#0b3b2e]'
               }`}
             >

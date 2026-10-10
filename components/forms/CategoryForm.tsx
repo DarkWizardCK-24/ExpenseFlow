@@ -35,7 +35,7 @@ const PRESET_COLORS = [
 ];
 
 const SectionLabel: React.FC<{ children: React.ReactNode; id?: string }> = ({ children, id }) => (
-  <span id={id} className="block text-xs font-semibold uppercase tracking-wider text-emerald-900 mb-2">
+  <span id={id} className="block text-xs font-medium text-emerald-950 mb-2">
     {children}
   </span>
 );
@@ -97,8 +97,8 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({ initialData, onSubmi
           {currentEmoji}
         </span>
         <div className="min-w-0">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-[#64748b]">Preview</p>
-          <p className="font-bold text-[#0b3b2e] truncate">{currentName?.trim() || 'Category name'}</p>
+          <p className="text-[11px] font-medium uppercase tracking-wider text-[#64748b]">Preview</p>
+          <p className="font-semibold text-[#0b3b2e] truncate">{currentName?.trim() || 'Category name'}</p>
         </div>
       </div>
 

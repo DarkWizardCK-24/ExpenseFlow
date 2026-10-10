@@ -121,7 +121,7 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
             {goal.emoji || '🎯'}
           </span>
           <div className="min-w-0">
-            <p className="text-sm font-bold text-[#0b3b2e] truncate">{goal.name}</p>
+            <p className="text-sm font-semibold text-[#0b3b2e] truncate">{goal.name}</p>
             <p className="text-xs text-[#64748b] tabular-nums">
               {formatCurrency(goal.saved, currencyCode)} saved of {formatCurrency(goal.target, currencyCode)}
             </p>
@@ -134,7 +134,7 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
             type="button"
             aria-pressed={!isWithdraw}
             onClick={() => switchMode('deposit')}
-            className={`flex items-center justify-center gap-1.5 py-2 text-xs font-bold rounded-lg transition-all ${
+            className={`flex items-center justify-center gap-1.5 py-2 text-xs font-semibold rounded-lg transition-all ${
               !isWithdraw ? 'bg-emerald-600 text-white shadow-sm' : 'text-[#64748b] hover:text-[#0b3b2e]'
             }`}
           >
@@ -147,7 +147,7 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
             disabled={!canWithdraw}
             title={canWithdraw ? undefined : 'Nothing saved yet to withdraw'}
             onClick={() => switchMode('withdraw')}
-            className={`flex items-center justify-center gap-1.5 py-2 text-xs font-bold rounded-lg transition-all disabled:opacity-40 disabled:cursor-not-allowed ${
+            className={`flex items-center justify-center gap-1.5 py-2 text-xs font-semibold rounded-lg transition-all disabled:opacity-40 disabled:cursor-not-allowed ${
               isWithdraw ? 'bg-amber-500 text-white shadow-sm' : 'text-[#64748b] hover:text-[#0b3b2e]'
             }`}
           >
@@ -158,11 +158,11 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
 
         {/* Amount */}
         <div className="mt-4 text-center">
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748b]">
+          <span className="text-[11px] font-medium uppercase tracking-wider text-[#64748b]">
             {isWithdraw ? 'How much are you taking out?' : 'How much are you adding?'}
           </span>
           <div className="mt-1 flex items-center justify-center gap-1">
-            <span className={`text-2xl font-bold ${isWithdraw ? 'text-amber-600' : 'text-emerald-600'}`}>
+            <span className={`text-2xl font-semibold ${isWithdraw ? 'text-amber-600' : 'text-emerald-600'}`}>
               {currencySymbol}
             </span>
             <input
@@ -175,7 +175,7 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
               autoFocus
               aria-label="Amount"
               {...register('amount')}
-              className="w-full max-w-[220px] bg-transparent text-center text-4xl font-black tracking-tight tabular-nums text-[#0b3b2e] placeholder-slate-300 outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              className="w-full max-w-[220px] bg-transparent text-center text-3xl sm:text-4xl font-bold tracking-tight tabular-nums text-[#0b3b2e] placeholder-slate-300 outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               style={{ colorScheme: 'light' }}
             />
           </div>
@@ -199,7 +199,7 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
               key={p.label}
               type="button"
               onClick={() => setValue('amount', p.value, { shouldValidate: true, shouldDirty: true })}
-              className={`h-8 px-3 rounded-full border text-[11px] font-bold bg-white transition-colors ${
+              className={`h-8 px-3 rounded-full border text-[11px] font-semibold bg-white transition-colors ${
                 currentAmount === p.value
                   ? isWithdraw
                     ? 'border-amber-400 text-amber-700'

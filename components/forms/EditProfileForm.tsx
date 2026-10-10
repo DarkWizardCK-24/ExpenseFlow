@@ -28,7 +28,7 @@ interface EditProfileFormProps {
 const BUDGET_PRESETS = [10000, 25000, 50000, 100000];
 
 const SectionLabel: React.FC<{ children: React.ReactNode; htmlFor?: string }> = ({ children, htmlFor }) => (
-  <label htmlFor={htmlFor} className="block text-xs font-semibold uppercase tracking-wider text-emerald-900">
+  <label htmlFor={htmlFor} className="block text-xs font-medium text-emerald-950">
     {children}
   </label>
 );
@@ -110,7 +110,7 @@ export const EditProfileForm: React.FC<EditProfileFormProps> = ({ userProfile, o
       <div className="space-y-2">
         <SectionLabel htmlFor="profile-budget">Monthly Budget</SectionLabel>
         <div className="relative flex items-center">
-          <span className="absolute left-3.5 text-sm font-bold text-emerald-700 pointer-events-none">{symbol}</span>
+          <span className="absolute left-3.5 text-sm font-semibold text-emerald-700 pointer-events-none">{symbol}</span>
           <input
             id="profile-budget"
             type="number"
@@ -118,7 +118,7 @@ export const EditProfileForm: React.FC<EditProfileFormProps> = ({ userProfile, o
             step="any"
             min={0}
             {...register('monthlyBudget')}
-            className="w-full h-11 pr-4 bg-[#f0fdf4] text-base font-bold text-[#0b3b2e] tabular-nums rounded-xl border border-[#a7f3d0] focus:bg-white focus:border-[#10b981] focus:ring-4 focus:ring-emerald-400/25 outline-none"
+            className="w-full h-11 pr-4 bg-[#f0fdf4] text-base font-semibold text-[#0b3b2e] tabular-nums rounded-xl border border-[#a7f3d0] focus:bg-white focus:border-[#10b981] focus:ring-4 focus:ring-emerald-400/25 outline-none"
             style={{ colorScheme: 'light', paddingLeft: `${Math.max(symbol.length, 1) * 0.6 + 1.5}rem` }}
           />
         </div>

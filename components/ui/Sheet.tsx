@@ -76,7 +76,7 @@ export const Sheet: React.FC<SheetProps> = ({
             {/* Header */}
             <div className="flex items-start justify-between gap-4 px-6 py-4 border-b border-slate-100">
               <div className="min-w-0">
-                <h3 id={titleId} className="text-lg font-bold tracking-tight text-[#0b3b2e]">
+                <h3 id={titleId} className="text-base sm:text-lg font-semibold tracking-tight text-[#0b3b2e]">
                   {title}
                 </h3>
                 {description && (

@@ -77,7 +77,7 @@ const Row: React.FC<{
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
   <section className="space-y-2">
-    <h2 className="px-1 text-xs font-bold uppercase tracking-wider text-[#94a3b8]">{title}</h2>
+    <h2 className="px-1 text-[11px] font-medium uppercase tracking-wider text-slate-400">{title}</h2>
     <Card lift={false} padding="none" className="divide-y divide-slate-100 overflow-hidden">
       {children}
     </Card>

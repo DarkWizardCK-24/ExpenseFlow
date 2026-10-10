@@ -43,10 +43,10 @@ export const Header: React.FC<HeaderProps> = ({ currentMonth, showMonthSelector 
               <Wallet className="w-5 h-5" />
             </Link>
             <div className="min-w-0">
-              <p className="md:hidden text-base font-extrabold tracking-tight text-[#0b3b2e] leading-tight">
+              <p className="md:hidden text-base font-bold tracking-tight text-[#0b3b2e] leading-tight">
                 ExpenseFlow
               </p>
-              <p className="hidden md:block text-sm font-bold text-[#0b3b2e] leading-tight truncate">
+              <p className="hidden md:block text-sm font-semibold text-[#0b3b2e] leading-tight truncate">
                 {activeItem?.label || 'ExpenseFlow'}
               </p>
               <p className="hidden md:block text-xs text-[#64748b] truncate">
@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({ currentMonth, showMonthSelector 
               </p>
             </div>
             {isDemoMode && (
-              <span className="hidden sm:inline-flex items-center text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full">
+              <span className="hidden sm:inline-flex items-center text-[10px] font-semibold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full">
                 Demo
               </span>
             )}
@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({ currentMonth, showMonthSelector 
           {/* Right tools */}
           <div className="flex items-center gap-2">
             {showMonthSelector && (
-              <span className="hidden lg:inline-flex items-center h-9 px-3 rounded-xl bg-slate-50 border border-slate-200/80 text-xs font-semibold text-[#0b3b2e]">
+              <span className="hidden lg:inline-flex items-center h-9 px-3 rounded-xl bg-slate-50 border border-slate-200/80 text-xs font-medium text-[#0b3b2e]">
                 {monthLabel}
               </span>
             )}
@@ -71,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({ currentMonth, showMonthSelector 
             <Link
               href="/profile"
               title="Change currency in profile"
-              className="hidden sm:inline-flex items-center gap-1 h-9 px-3 rounded-xl bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-bold hover:bg-emerald-100/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50"
+              className="hidden sm:inline-flex items-center gap-1 h-9 px-3 rounded-xl bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-medium hover:bg-emerald-100/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50"
             >
               <span aria-hidden="true">{currency.symbol.trim()}</span>
               <span>{currency.code}</span>

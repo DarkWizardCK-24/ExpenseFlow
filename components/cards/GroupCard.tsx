@@ -105,11 +105,11 @@ export const GroupCard: React.FC<GroupCardProps> = ({
             {group.emoji || '👥'}
           </span>
           <div className="min-w-0 flex-1">
-            <h3 className="font-bold text-[15px] leading-tight text-[#0b3b2e] truncate">
+            <h3 className="font-semibold text-sm leading-tight text-[#0b3b2e] truncate">
               {group.name}
             </h3>
             <p className="text-xs text-[#64748b] mt-1 flex items-center gap-1.5">
-              <span className="font-semibold text-emerald-700">{group.category}</span>
+              <span className="font-medium text-emerald-700">{group.category}</span>
               <span aria-hidden>•</span>
               <span>
                 {group.members.length} {group.members.length === 1 ? 'member' : 'members'}
@@ -122,14 +122,14 @@ export const GroupCard: React.FC<GroupCardProps> = ({
         {/* Balance + avatars */}
         <div className="mx-4 rounded-xl bg-slate-50/80 border border-slate-100 px-3.5 py-3 flex items-center justify-between gap-3">
           <div className="min-w-0">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-[#64748b]">
+            <p className="text-[11px] font-medium uppercase tracking-wider text-[#64748b]">
               {status === 'owed' ? 'You are owed' : status === 'owe' ? 'You owe' : 'Your balance'}
             </p>
             {loading ? (
               <Skeleton className="h-6 w-24 mt-1" />
             ) : (
               <p
-                className={`text-xl font-extrabold tabular-nums leading-tight mt-0.5 ${
+                className={`text-lg font-semibold tabular-nums leading-tight mt-0.5 ${
                   status === 'owed'
                     ? 'text-emerald-600'
                     : status === 'owe'
@@ -155,7 +155,7 @@ export const GroupCard: React.FC<GroupCardProps> = ({
               />
             ))}
             {others > 0 && (
-              <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold flex items-center justify-center ring-2 ring-white">
+              <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-semibold flex items-center justify-center ring-2 ring-white">
                 +{others}
               </span>
             )}

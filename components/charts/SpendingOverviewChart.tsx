@@ -115,25 +115,25 @@ export const SpendingOverviewChart: React.FC<SpendingOverviewChartProps> = ({
                 const net = income - spending;
                 return (
                   <div className="bg-white p-3 rounded-xl shadow-xl border border-slate-100 text-xs min-w-[160px]">
-                    <p className="font-bold text-[#0b3b2e] mb-2">{label}</p>
+                    <p className="font-semibold text-[#0b3b2e] mb-2">{label}</p>
                     <div className="space-y-1 tabular-nums">
                       <p className="flex items-center justify-between gap-4">
                         <span className="flex items-center gap-1.5 text-[#64748b]">
                           <span className="w-2 h-2 rounded-full" style={{ backgroundColor: INCOME_COLOR }} />
                           Income
                         </span>
-                        <span className="font-semibold text-emerald-700">{formatCurrency(income, currency)}</span>
+                        <span className="font-medium text-emerald-700">{formatCurrency(income, currency)}</span>
                       </p>
                       <p className="flex items-center justify-between gap-4">
                         <span className="flex items-center gap-1.5 text-[#64748b]">
                           <span className="w-2 h-2 rounded-full" style={{ backgroundColor: SPENDING_COLOR }} />
                           Spending
                         </span>
-                        <span className="font-semibold text-rose-600">{formatCurrency(spending, currency)}</span>
+                        <span className="font-medium text-rose-600">{formatCurrency(spending, currency)}</span>
                       </p>
                       <p className="flex items-center justify-between gap-4 pt-1 mt-1 border-t border-slate-100">
                         <span className="text-[#64748b]">Net</span>
-                        <span className={`font-bold ${net >= 0 ? 'text-emerald-700' : 'text-rose-600'}`}>
+                        <span className={`font-semibold ${net >= 0 ? 'text-emerald-700' : 'text-rose-600'}`}>
                           {net >= 0 ? '+' : '-'}
                           {formatCurrency(net, currency)}
                         </span>

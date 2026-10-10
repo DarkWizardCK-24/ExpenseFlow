@@ -49,11 +49,11 @@ const CATEGORY_DATA: Record<Goal['category'], { emoji: string; label: string }> 
 const EMOJI_CHOICES = ['🎯', '✈️', '🗾', '🏝️', '💻', '📱', '🛡️', '🎓', '🏡', '🚗', '🏍️', '💍', '🎸', '👶', '🐶', '💰'];
 
 const SectionLabel: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <span className="block text-xs font-semibold uppercase tracking-wider text-emerald-900">{children}</span>
+  <span className="block text-xs font-medium text-emerald-950">{children}</span>
 );
 
 const AMOUNT_INPUT_CLASS =
-  'w-full bg-transparent font-black tracking-tight text-[#0b3b2e] placeholder-slate-300 outline-none tabular-nums [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none';
+  'w-full bg-transparent font-bold tracking-tight text-[#0b3b2e] placeholder-slate-300 outline-none tabular-nums [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none';
 
 export const GoalForm: React.FC<GoalFormProps> = ({ onSubmit, onCancel, initialData, currency }) => {
   const [submitting, setSubmitting] = useState(false);

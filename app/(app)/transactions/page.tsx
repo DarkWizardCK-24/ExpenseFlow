@@ -161,7 +161,7 @@ function TransactionsContent({ onManageCategories }: { onManageCategories: () =>
       {/* Page header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold text-[#0b3b2e]">Transactions</h1>
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0b3b2e]">Transactions</h1>
           <p className="text-sm text-[#64748b] mt-0.5">Search, filter and manage every income and expense.</p>
         </div>
         <div className="grid grid-cols-2 sm:flex items-center gap-2">
@@ -515,13 +515,13 @@ function SummaryTile({
         <span className={`hidden sm:flex w-8 h-8 rounded-lg items-center justify-center ${toneChip}`}>
           <Icon className="w-4 h-4" />
         </span>
-        <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#64748b]">{label}</span>
+        <span className="text-[11px] sm:text-xs font-medium uppercase tracking-wider text-[#64748b]">{label}</span>
       </div>
       {loading ? (
         <Skeleton className="h-6 w-3/4 mt-2" />
       ) : (
         <p
-          className={`mt-1.5 sm:mt-2 text-sm sm:text-xl font-bold tabular-nums truncate ${toneText}`}
+          className={`mt-1.5 sm:mt-2 text-sm sm:text-lg font-semibold tabular-nums truncate ${toneText}`}
           title={value}
         >
           {value}

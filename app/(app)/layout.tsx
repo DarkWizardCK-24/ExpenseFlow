@@ -62,8 +62,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         <div className="w-16 h-16 rounded-3xl bg-gradient-to-tr from-[#047857] to-[#10b981] flex items-center justify-center text-white shadow-emerald-lg mb-4">
           <Wallet className="w-8 h-8" />
         </div>
-        <h2 className="text-xl font-extrabold tracking-tight text-[#0b3b2e]">ExpenseFlow</h2>
-        <div className="flex items-center gap-2 mt-4 text-xs font-semibold text-emerald-700" role="status">
+        <h2 className="text-xl font-bold tracking-tight text-[#0b3b2e]">ExpenseFlow</h2>
+        <div className="flex items-center gap-2 mt-4 text-xs font-medium text-emerald-700" role="status">
           <Spinner size="sm" />
           <span>Loading your finances...</span>
         </div>

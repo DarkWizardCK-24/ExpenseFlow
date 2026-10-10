@@ -370,7 +370,7 @@ export default function ReportsPage() {
                     const pct = report.expense > 0 ? Math.round((item.value / report.expense) * 100) : 0;
                     return (
                       <li key={item.id} className="flex items-center gap-3">
-                        <span className="w-5 text-xs font-bold text-[#94a3b8] tabular-nums text-right">{idx + 1}</span>
+                        <span className="w-5 text-xs font-medium text-[#94a3b8] tabular-nums text-right">{idx + 1}</span>
                         <span
                           aria-hidden="true"
                           className="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
@@ -381,7 +381,7 @@ export default function ReportsPage() {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-baseline justify-between gap-2">
                             <p className="text-sm font-semibold text-[#0b3b2e] truncate">{item.name}</p>
-                            <p className="text-sm font-bold text-[#0b3b2e] tabular-nums flex-shrink-0">
+                            <p className="text-sm font-semibold text-[#0b3b2e] tabular-nums flex-shrink-0">
                               {formatCurrency(item.value, currency)}
                             </p>
                           </div>
@@ -423,7 +423,7 @@ export default function ReportsPage() {
                           </p>
                         </div>
                       </div>
-                      <span className="text-sm font-bold text-rose-600 tabular-nums flex-shrink-0">
+                      <span className="text-sm font-semibold text-rose-600 tabular-nums flex-shrink-0">
                         -{formatCurrency(m.total, currency)}
                       </span>
                     </li>

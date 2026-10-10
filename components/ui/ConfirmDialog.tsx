@@ -92,7 +92,7 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
                   ))}
               </div>
               <div className="space-y-1.5 flex-1 min-w-0">
-                <h3 id={titleId} className="text-lg font-bold tracking-tight text-[#0b3b2e]">
+                <h3 id={titleId} className="text-base sm:text-lg font-semibold tracking-tight text-[#0b3b2e]">
                   {title}
                 </h3>
                 <p id={descId} className="text-sm text-[#64748b] leading-relaxed break-words">

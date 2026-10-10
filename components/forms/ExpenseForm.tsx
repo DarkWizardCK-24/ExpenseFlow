@@ -54,7 +54,7 @@ const PAYMENT_METHODS: { value: PaymentMethod; icon: LucideIcon }[] = [
 const toDateString = (d: Date) => format(d, 'yyyy-MM-dd');
 
 const SectionLabel: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <label className="block text-xs font-semibold uppercase tracking-wider text-emerald-900">
+  <label className="block text-xs font-medium text-emerald-950">
     {children}
   </label>
 );
@@ -134,7 +134,7 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
               type="button"
               aria-pressed={currentType === value}
               onClick={() => select('type', value)}
-              className={`flex items-center justify-center gap-1.5 py-2 text-xs font-bold rounded-lg transition-all ${
+              className={`flex items-center justify-center gap-1.5 py-2 text-xs font-semibold rounded-lg transition-all ${
                 currentType === value ? active : 'text-[#64748b] hover:text-[#0b3b2e]'
               }`}
             >
@@ -146,12 +146,12 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
 
         {/* Amount */}
         <div className="mt-4 text-center">
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748b]">
+          <span className="text-[11px] font-medium uppercase tracking-wider text-[#64748b]">
             {isExpense ? 'How much did you spend?' : 'How much did you receive?'}
           </span>
           <div className="mt-1 flex items-center justify-center gap-1">
             <span
-              className={`text-2xl font-bold ${isExpense ? 'text-rose-500' : 'text-emerald-600'}`}
+              className={`text-2xl font-semibold ${isExpense ? 'text-rose-500' : 'text-emerald-600'}`}
             >
               {currencySymbol}
             </span>
@@ -163,7 +163,7 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
               autoFocus={!initialData}
               aria-label="Amount"
               {...register('amount')}
-              className="w-full max-w-[220px] bg-transparent text-center text-4xl font-black tracking-tight text-[#0b3b2e] placeholder-slate-300 outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              className="w-full max-w-[220px] bg-transparent text-center text-3xl sm:text-4xl font-bold tracking-tight tabular-nums text-[#0b3b2e] placeholder-slate-300 outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               style={{ colorScheme: 'light' }}
             />
           </div>
@@ -245,7 +245,7 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
               type="button"
               aria-pressed={currentDate === value}
               onClick={() => select('date', value)}
-              className={`h-11 px-3.5 rounded-xl border text-xs font-bold transition-all ${
+              className={`h-11 px-3.5 rounded-xl border text-xs font-semibold transition-all ${
                 currentDate === value
                   ? 'bg-emerald-600 border-emerald-600 text-white shadow-xs'
                   : 'bg-white border-slate-200 text-slate-600 hover:border-emerald-300'
@@ -278,7 +278,7 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
                 type="button"
                 aria-pressed={isSelected}
                 onClick={() => select('paymentMethod', value)}
-                className={`flex flex-col items-center gap-1 py-2.5 text-[11px] font-bold rounded-xl border transition-all ${
+                className={`flex flex-col items-center gap-1 py-2.5 text-[11px] font-semibold rounded-xl border transition-all ${
                   isSelected
                     ? 'bg-emerald-600 text-white border-emerald-600 shadow-xs'
                     : 'bg-white text-slate-600 border-slate-200 hover:border-emerald-300 hover:text-emerald-800'

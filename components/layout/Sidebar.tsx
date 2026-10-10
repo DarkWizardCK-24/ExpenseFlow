@@ -29,8 +29,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSignOutRequest, onAddTransac
           <Wallet className="w-5 h-5" />
         </div>
         <div>
-          <p className="font-extrabold text-lg tracking-tight text-[#0b3b2e] leading-none">ExpenseFlow</p>
-          <p className="text-[11px] font-semibold text-emerald-600 mt-1">
+          <p className="font-bold text-base tracking-tight text-[#0b3b2e] leading-none">ExpenseFlow</p>
+          <p className="text-[11px] font-medium text-emerald-600 mt-1">
             {isDemoMode ? 'Demo workspace' : 'Smart money, simply'}
           </p>
         </div>
@@ -40,7 +40,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSignOutRequest, onAddTransac
         <button
           type="button"
           onClick={onAddTransaction}
-          className="mb-5 w-full h-11 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#047857] to-[#10b981] text-white text-sm font-semibold shadow-emerald hover:brightness-105 active:scale-[0.98] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50 focus-visible:ring-offset-2"
+          className="mb-5 w-full h-11 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#047857] to-[#10b981] text-white text-sm font-medium shadow-emerald hover:brightness-105 active:scale-[0.98] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50 focus-visible:ring-offset-2"
         >
           <Plus className="w-4 h-4" strokeWidth={2.5} />
           New transaction
@@ -49,7 +49,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSignOutRequest, onAddTransac
 
       {/* Navigation */}
       <nav aria-label="Main navigation" className="flex-1 overflow-y-auto no-scrollbar">
-        <p className="px-3 mb-2 text-[10px] font-bold uppercase tracking-widest text-[#94a3b8]">Menu</p>
+        <p className="px-3 mb-2 text-[11px] font-medium uppercase tracking-wider text-slate-400">Menu</p>
         <ul className="space-y-1">
           {NAV_ITEMS.map((item) => {
             const Icon = item.icon;
@@ -60,9 +60,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSignOutRequest, onAddTransac
                 <Link
                   href={item.href}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`group relative flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50 ${
+                  className={`group relative flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50 ${
                     isActive
-                      ? 'bg-emerald-50 text-[#047857]'
+                      ? 'bg-emerald-50 text-[#047857] font-semibold'
                       : 'text-[#64748b] hover:text-[#0b3b2e] hover:bg-slate-50'
                   }`}
                 >
@@ -97,7 +97,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSignOutRequest, onAddTransac
         >
           <Avatar name={userProfile?.name || 'User'} photoURL={userProfile?.photoURL} size="md" />
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-bold text-[#0b3b2e] truncate">{userProfile?.name || 'ExpenseFlow User'}</p>
+            <p className="text-sm font-semibold text-[#0b3b2e] truncate">{userProfile?.name || 'ExpenseFlow User'}</p>
             <p className="text-xs text-[#64748b] truncate">{userProfile?.email || 'Signed in'}</p>
           </div>
         </Link>
@@ -105,7 +105,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSignOutRequest, onAddTransac
         <button
           type="button"
           onClick={onSignOutRequest}
-          className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-semibold text-[#64748b] hover:bg-rose-50 hover:text-rose-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400/50"
+          className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-medium text-[#64748b] hover:bg-rose-50 hover:text-rose-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400/50"
         >
           <LogOut className="w-4 h-4" />
           <span>Sign out</span>

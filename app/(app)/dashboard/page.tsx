@@ -57,7 +57,7 @@ const calcChange = (current: number, previous: number) => {
 const SeeAllLink: React.FC<{ href: string; label: string }> = ({ href, label }) => (
   <Link
     href={href}
-    className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50"
+    className="inline-flex items-center gap-1 text-xs font-medium text-emerald-700 hover:text-emerald-800 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50"
   >
     {label}
     <ArrowRight className="w-3.5 h-3.5" />
@@ -280,7 +280,7 @@ export default function DashboardPage() {
             {txLoading ? (
               <Skeleton className="h-11 w-56 mt-2 bg-white/20" />
             ) : (
-              <p className="mt-1 text-4xl sm:text-5xl font-black tracking-tight tabular-nums break-words">
+              <p className="mt-1 text-3xl sm:text-4xl lg:text-[40px] font-bold tracking-tight tabular-nums break-words leading-tight">
                 {stats.balance < 0 ? '-' : ''}
                 {formatCurrency(stats.balance, currency)}
               </p>
@@ -289,12 +289,12 @@ export default function DashboardPage() {
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 tabular-nums">
                 <TrendingUp className="w-3.5 h-3.5 text-emerald-200" />
                 <span className="text-emerald-100">In</span>
-                <span className="font-semibold">{formatCurrency(stats.monthIncome, currency)}</span>
+                <span className="font-medium">{formatCurrency(stats.monthIncome, currency)}</span>
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 tabular-nums">
                 <TrendingDown className="w-3.5 h-3.5 text-rose-200" />
                 <span className="text-emerald-100">Out</span>
-                <span className="font-semibold">{formatCurrency(stats.monthExpenses, currency)}</span>
+                <span className="font-medium">{formatCurrency(stats.monthExpenses, currency)}</span>
               </span>
             </div>
           </div>
@@ -302,10 +302,10 @@ export default function DashboardPage() {
           {/* Monthly budget */}
           <div className="rounded-2xl bg-white/10 border border-white/15 p-4 sm:p-5 backdrop-blur-sm">
             <div className="flex items-center justify-between gap-2">
-              <p className="text-sm font-semibold">{format(new Date(), 'MMMM')} budget</p>
+              <p className="text-sm font-medium">{format(new Date(), 'MMMM')} budget</p>
               <Link
                 href="/profile"
-                className="text-xs font-semibold text-emerald-100 hover:text-white underline-offset-2 hover:underline rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                className="text-xs font-medium text-emerald-100 hover:text-white underline-offset-2 hover:underline rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
               >
                 {monthlyBudget > 0 ? 'Edit' : 'Set budget'}
               </Link>
@@ -313,7 +313,7 @@ export default function DashboardPage() {
             {monthlyBudget > 0 ? (
               <>
                 <div className="mt-3 flex items-baseline justify-between gap-2 tabular-nums">
-                  <span className="text-2xl font-extrabold">{formatCurrency(stats.monthExpenses, currency)}</span>
+                  <span className="text-xl sm:text-2xl font-semibold">{formatCurrency(stats.monthExpenses, currency)}</span>
                   <span className="text-xs text-emerald-100">of {formatCurrency(monthlyBudget, currency)}</span>
                 </div>
                 <div
@@ -414,7 +414,7 @@ export default function DashboardPage() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6">
         <section aria-labelledby="recent-tx" className="lg:col-span-3 min-w-0 space-y-3">
           <div className="flex items-center justify-between gap-3">
-            <h2 id="recent-tx" className="text-base font-bold text-[#0b3b2e]">
+            <h2 id="recent-tx" className="text-sm sm:text-base font-semibold text-[#0b3b2e]">
               Recent transactions
             </h2>
             {transactions.length > 0 && (
@@ -462,7 +462,7 @@ export default function DashboardPage() {
           {/* Goal preview */}
           <section aria-labelledby="goal-preview" className="space-y-3">
             <div className="flex items-center justify-between gap-3">
-              <h2 id="goal-preview" className="text-base font-bold text-[#0b3b2e]">
+              <h2 id="goal-preview" className="text-sm sm:text-base font-semibold text-[#0b3b2e]">
                 Savings goal
               </h2>
               {goals.length > 0 && <SeeAllLink href="/budget" label={`All goals (${goals.length})`} />}
@@ -497,7 +497,7 @@ export default function DashboardPage() {
           {/* Group preview */}
           <section aria-labelledby="group-preview" className="space-y-3">
             <div className="flex items-center justify-between gap-3">
-              <h2 id="group-preview" className="text-base font-bold text-[#0b3b2e]">
+              <h2 id="group-preview" className="text-sm sm:text-base font-semibold text-[#0b3b2e]">
                 Split group
               </h2>
               {groups.length > 0 && <SeeAllLink href="/split" label={`All groups (${groups.length})`} />}

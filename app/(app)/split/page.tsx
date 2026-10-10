@@ -93,11 +93,11 @@ function SummaryTile({
         {icon}
       </span>
       <div className="min-w-0">
-        <p className="text-[11px] font-semibold uppercase tracking-wider text-[#64748b]">{label}</p>
+        <p className="text-[11px] font-medium uppercase tracking-wider text-[#64748b]">{label}</p>
         {loading ? (
           <Skeleton className="h-6 w-20 mt-1" />
         ) : (
-          <p className={`text-xl font-extrabold tabular-nums leading-tight truncate ${tones.text}`}>{value}</p>
+          <p className={`text-lg font-semibold tabular-nums leading-tight truncate ${tones.text}`}>{value}</p>
         )}
       </div>
     </div>
@@ -140,7 +140,7 @@ export default function SplitBillsPage() {
       {/* Page header */}
       <div className="flex items-start sm:items-center justify-between gap-4">
         <div className="min-w-0">
-          <h1 className="text-2xl font-bold text-[#0b3b2e]">Split bills</h1>
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0b3b2e]">Split bills</h1>
           <p className="text-sm text-[#64748b] mt-0.5">
             Share costs with friends, flatmates and trips
           </p>

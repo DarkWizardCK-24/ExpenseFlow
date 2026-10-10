@@ -37,7 +37,7 @@ export const BottomNav: React.FC = () => {
                 >
                   <Icon className="w-5 h-5" strokeWidth={isActive ? 2.4 : 2} />
                 </span>
-                <span className={`text-[10px] leading-none ${isActive ? 'font-bold' : 'font-semibold'}`}>
+                <span className={`text-[10px] leading-none ${isActive ? 'font-semibold' : 'font-medium'}`}>
                   {tab.shortLabel}
                 </span>
               </Link>
