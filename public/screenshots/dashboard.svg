@@ -1,0 +1,182 @@
+<svg width="1000" height="620" viewBox="0 0 1000 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1000" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D1FAE5" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#F0FDF4"/>
+      <stop offset="1" stop-color="#ECFDF5"/>
+    </linearGradient>
+    <linearGradient id="primaryCard" x1="0" y1="0" x2="260" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#064E3B"/>
+      <stop offset="0.5" stop-color="#059669"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="ctaBtn" x1="0" y1="0" x2="150" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#047857"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="4" width="1000" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#059669" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- App Background -->
+  <rect width="1000" height="620" rx="28" fill="url(#bgGrad)"/>
+
+  <!-- Top App Navigation Bar -->
+  <rect x="24" y="20" width="952" height="64" rx="20" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <rect x="42" y="34" width="36" height="36" rx="12" fill="#059669"/>
+  <path d="M52 52V44C52 42.8954 52.8954 42 54 42H66C67.1046 42 68 42.8954 68 44V52C68 53.1046 67.1046 54 66 54H54C52.8954 54 52 53.1046 52 52Z" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="63" cy="48" r="1.5" fill="#FFFFFF"/>
+  <text x="88" y="52" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="16" font-weight="900">ExpenseFlow</text>
+  <text x="88" y="63" fill="#10B981" font-family="Inter, sans-serif" font-size="9" font-weight="800" letter-spacing="1">SMART INR VAULT</text>
+
+  <!-- Search / Quick Filter Bar -->
+  <rect x="250" y="34" width="380" height="36" rx="12" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="274" y="56" fill="#64748B" font-family="Inter, sans-serif" font-size="12">Search expenses, UPI tags, categories...</text>
+
+  <!-- Currency Badge (INR ₹) -->
+  <rect x="740" y="36" width="76" height="32" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="1"/>
+  <text x="752" y="57" fill="#047857" font-family="Inter, sans-serif" font-size="11" font-weight="900">₹ INR</text>
+
+  <!-- Notification Bell -->
+  <rect x="826" y="34" width="36" height="36" rx="12" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <path d="M844 45C844 43.5 842.5 42 840 42C837.5 42 836 43.5 836 45C836 50 833 51 833 52H847C847 51 844 50 844 45Z" stroke="#059669" stroke-width="1.8"/>
+  <circle cx="852" cy="38" r="4" fill="#EF4444"/>
+
+  <!-- User Initials Avatar (AS for Arjun Sharma) -->
+  <rect x="872" y="32" width="40" height="40" rx="14" fill="#047857" stroke="#34D399" stroke-width="2"/>
+  <text x="883" y="57" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="13" font-weight="900">AS</text>
+
+  <!-- Hero Welcome Banner -->
+  <rect x="24" y="96" width="952" height="76" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <rect x="42" y="110" width="48" height="48" rx="16" fill="url(#primaryCard)"/>
+  <text x="54" y="140" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="16" font-weight="900">AS</text>
+  
+  <rect x="102" y="112" width="96" height="18" rx="9" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="112" y="125" fill="#047857" font-family="Inter, sans-serif" font-size="9" font-weight="800" letter-spacing="0.5">₹ LIVE VAULT</text>
+  <text x="102" y="148" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="17" font-weight="900">Good morning, Arjun Sharma ✨</text>
+  <text x="102" y="162" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Your cashflow velocity is on track with 48.6% net savings rate this month.</text>
+
+  <!-- Quick Action Buttons -->
+  <rect x="710" y="114" width="124" height="40" rx="12" fill="url(#ctaBtn)"/>
+  <text x="734" y="139" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="800">+ Add Expense</text>
+
+  <rect x="844" y="114" width="112" height="40" rx="12" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1.2"/>
+  <text x="868" y="139" fill="#047857" font-family="Inter, sans-serif" font-size="12" font-weight="800">⚡ Split Bill</text>
+
+
+  <!-- 4 Stat Summary Cards (INR Currency) -->
+  <!-- Card 1: Total Balance (Primary Emerald Holographic) -->
+  <rect x="24" y="184" width="224" height="114" rx="20" fill="url(#primaryCard)" stroke="#34D399" stroke-width="1"/>
+  <rect x="40" y="198" width="80" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.2"/>
+  <text x="48" y="211" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="9" font-weight="800">TOTAL BALANCE</text>
+  <text x="40" y="248" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="24" font-weight="900">₹1,48,500</text>
+  <text x="40" y="272" fill="#D1FAE5" font-family="Inter, sans-serif" font-size="10" font-weight="600">Across 3 accounts &amp; savings</text>
+
+  <!-- Card 2: Monthly Inflow -->
+  <rect x="264" y="184" width="224" height="114" rx="20" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="282" y="208" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="800">MONTHLY INFLOW</text>
+  <rect x="444" y="196" width="28" height="28" rx="8" fill="#ECFDF5"/>
+  <path d="M458 214V206M458 206L454 210M458 206L462 210" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+  <text x="282" y="248" fill="#059669" font-family="Inter, sans-serif" font-size="22" font-weight="900">+₹85,000</text>
+  <rect x="282" y="260" width="70" height="18" rx="6" fill="#ECFDF5"/>
+  <text x="288" y="273" fill="#059669" font-family="Inter, sans-serif" font-size="9" font-weight="800">↑ 12% vs Sep</text>
+
+  <!-- Card 3: Monthly Outflow -->
+  <rect x="504" y="184" width="224" height="114" rx="20" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="522" y="208" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="800">MONTHLY OUTFLOW</text>
+  <rect x="684" y="196" width="28" height="28" rx="8" fill="#FEE2E2"/>
+  <path d="M698 206V214M698 214L694 210M698 214L702 210" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
+  <text x="522" y="248" fill="#DC2626" font-family="Inter, sans-serif" font-size="22" font-weight="900">-₹28,450</text>
+  <text x="522" y="272" fill="#64748B" font-family="Inter, sans-serif" font-size="10">57% of ₹50,000 budget</text>
+
+  <!-- Card 4: Net Savings Rate -->
+  <rect x="744" y="184" width="232" height="114" rx="20" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="762" y="208" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="800">NET SAVINGS PACE</text>
+  <rect x="930" y="196" width="28" height="28" rx="8" fill="#EFF6FF"/>
+  <text x="938" y="215" font-size="12">🎯</text>
+  <text x="762" y="248" fill="#047857" font-family="Inter, sans-serif" font-size="22" font-weight="900">+₹56,550</text>
+  <rect x="762" y="260" width="80" height="18" rx="6" fill="#ECFDF5"/>
+  <text x="768" y="273" fill="#047857" font-family="Inter, sans-serif" font-size="9" font-weight="800">48.6% rate 🚀</text>
+
+
+  <!-- Middle Row: 6-Month Trajectory Chart (Left) & Monthly Budget Ring (Right) -->
+  <!-- Left Chart Container -->
+  <rect x="24" y="312" width="600" height="284" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="44" y="340" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="14" font-weight="900">Cash Flow Trajectory (Past 6 Months)</text>
+  <text x="44" y="356" fill="#64748B" font-family="Inter, sans-serif" font-size="10">Monthly income credits vs daily expenses in ₹</text>
+
+  <!-- Legend -->
+  <rect x="470" y="334" width="10" height="10" rx="3" fill="#10B981"/>
+  <text x="486" y="342" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">Income</text>
+  <rect x="540" y="334" width="10" height="10" rx="3" fill="#EF4444"/>
+  <text x="556" y="342" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="700">Expense</text>
+
+  <!-- Chart Vector Bars -->
+  <g transform="translate(60, 380)">
+    <!-- Grid -->
+    <line x1="0" y1="0" x2="520" y2="0" stroke="#F1F5F9"/>
+    <text x="-40" y="4" fill="#94A3B8" font-family="Inter" font-size="9">₹100k</text>
+    <line x1="0" y1="40" x2="520" y2="40" stroke="#F1F5F9"/>
+    <text x="-40" y="44" fill="#94A3B8" font-family="Inter" font-size="9">₹75k</text>
+    <line x1="0" y1="80" x2="520" y2="80" stroke="#F1F5F9"/>
+    <text x="-40" y="84" fill="#94A3B8" font-family="Inter" font-size="9">₹50k</text>
+    <line x1="0" y1="120" x2="520" y2="120" stroke="#F1F5F9"/>
+    <text x="-40" y="124" fill="#94A3B8" font-family="Inter" font-size="9">₹25k</text>
+    <line x1="0" y1="160" x2="520" y2="160" stroke="#E2E8F0"/>
+    <text x="-40" y="164" fill="#94A3B8" font-family="Inter" font-size="9">₹0</text>
+
+    <!-- May -->
+    <rect x="30" y="30" width="16" height="130" rx="4" fill="#10B981"/>
+    <rect x="50" y="100" width="16" height="60" rx="4" fill="#EF4444"/>
+    <text x="38" y="178" fill="#64748B" font-family="Inter" font-size="10" font-weight="600">May</text>
+
+    <!-- Jun -->
+    <rect x="115" y="25" width="16" height="135" rx="4" fill="#10B981"/>
+    <rect x="135" y="105" width="16" height="55" rx="4" fill="#EF4444"/>
+    <text x="123" y="178" fill="#64748B" font-family="Inter" font-size="10" font-weight="600">Jun</text>
+
+    <!-- Jul -->
+    <rect x="200" y="28" width="16" height="132" rx="4" fill="#10B981"/>
+    <rect x="220" y="95" width="16" height="65" rx="4" fill="#EF4444"/>
+    <text x="208" y="178" fill="#64748B" font-family="Inter" font-size="10" font-weight="600">Jul</text>
+
+    <!-- Aug -->
+    <rect x="285" y="20" width="16" height="140" rx="4" fill="#10B981"/>
+    <rect x="305" y="110" width="16" height="50" rx="4" fill="#EF4444"/>
+    <text x="293" y="178" fill="#64748B" font-family="Inter" font-size="10" font-weight="600">Aug</text>
+
+    <!-- Sep -->
+    <rect x="370" y="24" width="16" height="136" rx="4" fill="#10B981"/>
+    <rect x="390" y="100" width="16" height="60" rx="4" fill="#EF4444"/>
+    <text x="378" y="178" fill="#64748B" font-family="Inter" font-size="10" font-weight="600">Sep</text>
+
+    <!-- Oct -->
+    <rect x="455" y="15" width="16" height="145" rx="4" fill="#059669"/>
+    <rect x="475" y="112" width="16" height="48" rx="4" fill="#EF4444"/>
+    <text x="463" y="178" fill="#047857" font-family="Inter" font-size="10" font-weight="900">Oct</text>
+  </g>
+
+
+  <!-- Right Container: Monthly Budget Ring & Recent Activity -->
+  <rect x="644" y="312" width="332" height="284" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="664" y="340" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="14" font-weight="900">Monthly Budget Ring 🎯</text>
+  <text x="664" y="356" fill="#64748B" font-family="Inter, sans-serif" font-size="10">57% spent of ₹50,000 target</text>
+
+  <!-- Budget Circle Gauge -->
+  <g transform="translate(810, 430)">
+    <circle cx="0" cy="0" r="48" stroke="#F1F5F9" stroke-width="12" fill="none"/>
+    <circle cx="0" cy="0" r="48" stroke="#10B981" stroke-width="12" stroke-linecap="round" stroke-dasharray="172 301" transform="rotate(-90)" fill="none"/>
+    <text x="0" y="-4" text-anchor="middle" fill="#64748B" font-family="Inter" font-size="9" font-weight="700">SPENT</text>
+    <text x="0" y="14" text-anchor="middle" fill="#0B3B2E" font-family="Inter" font-size="16" font-weight="900">₹28,450</text>
+  </g>
+
+  <!-- Budget Stats Pill -->
+  <rect x="664" y="500" width="292" height="38" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="676" y="524" fill="#047857" font-family="Inter, sans-serif" font-size="11" font-weight="800">Remaining Budget:</text>
+  <text x="886" y="524" fill="#047857" font-family="Inter, sans-serif" font-size="12" font-weight="900">₹21,550</text>
+
+  <rect x="664" y="546" width="292" height="38" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="676" y="570" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="600">Daily Safe Spend Limit:</text>
+  <text x="898" y="570" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="900">₹1,026/day</text>
+</svg>

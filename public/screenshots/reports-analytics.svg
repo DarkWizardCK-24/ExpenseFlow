@@ -1,0 +1,168 @@
+<svg width="1000" height="620" viewBox="0 0 1000 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1000" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D1FAE5" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#F0FDF4"/>
+      <stop offset="1" stop-color="#ECFDF5"/>
+    </linearGradient>
+    <linearGradient id="incomeBar" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="expenseBar" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#F87171"/>
+      <stop offset="1" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="primaryBtn" x1="0" y1="0" x2="160" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#047857"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="4" width="1000" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#059669" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="620" rx="28" fill="url(#bgGrad)"/>
+
+  <!-- Top App Navigation / Page Header -->
+  <rect x="24" y="20" width="952" height="76" rx="20" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="48" y="54" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="20" font-weight="900">Financial Reports &amp; Analytics 📊</text>
+  <text x="48" y="74" fill="#64748B" font-family="Inter, sans-serif" font-size="12">Deep insights into cashflow velocity, burn rate, category concentration, and savings growth in ₹ (INR)</text>
+
+  <!-- Period Selector & Export CSV -->
+  <rect x="670" y="38" width="140" height="40" rx="14" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="686" y="63" fill="#047857" font-family="Inter, sans-serif" font-size="12" font-weight="800">Past 6 Months ▾</text>
+
+  <rect x="822" y="38" width="138" height="40" rx="14" fill="url(#primaryBtn)"/>
+  <text x="842" y="63" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="800">📥 Export CSV</text>
+
+
+  <!-- Left Main Column: Cashflow Inflow vs Outflow 6-Month Comparison in ₹ -->
+  <rect x="24" y="112" width="580" height="488" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+
+  <text x="48" y="142" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="16" font-weight="900">Cash Flow Trajectory (Income vs Expenses in ₹)</text>
+  <text x="48" y="160" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Visual trajectory of financial reserves across recent billing cycles</text>
+
+  <!-- Legend -->
+  <rect x="420" y="136" width="12" height="12" rx="3" fill="#10B981"/>
+  <text x="438" y="146" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="700">Income (₹)</text>
+  <rect x="506" y="136" width="12" height="12" rx="3" fill="#EF4444"/>
+  <text x="524" y="146" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="700">Expenses (₹)</text>
+
+  <!-- 6-Month Bar Chart Graphic -->
+  <g transform="translate(60, 196)">
+    <!-- Grid lines -->
+    <line x1="0" y1="0" x2="500" y2="0" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="-40" y="5" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">₹1.2L</text>
+
+    <line x1="0" y1="60" x2="500" y2="60" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="-40" y="65" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">₹90k</text>
+
+    <line x1="0" y1="120" x2="500" y2="120" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="-40" y="125" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">₹60k</text>
+
+    <line x1="0" y1="180" x2="500" y2="180" stroke="#F1F5F9" stroke-width="1"/>
+    <text x="-40" y="185" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">₹30k</text>
+
+    <line x1="0" y1="240" x2="500" y2="240" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="-40" y="245" fill="#94A3B8" font-family="Inter, sans-serif" font-size="10">₹0</text>
+
+    <!-- Month 1: May -->
+    <rect x="25" y="60" width="20" height="180" rx="5" fill="url(#incomeBar)"/>
+    <rect x="49" y="150" width="20" height="90" rx="5" fill="url(#expenseBar)"/>
+    <text x="37" y="260" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="600">May</text>
+
+    <!-- Month 2: Jun -->
+    <rect x="105" y="50" width="20" height="190" rx="5" fill="url(#incomeBar)"/>
+    <rect x="129" y="160" width="20" height="80" rx="5" fill="url(#expenseBar)"/>
+    <text x="117" y="260" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="600">Jun</text>
+
+    <!-- Month 3: Jul -->
+    <rect x="185" y="55" width="20" height="185" rx="5" fill="url(#incomeBar)"/>
+    <rect x="209" y="140" width="20" height="100" rx="5" fill="url(#expenseBar)"/>
+    <text x="197" y="260" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="600">Jul</text>
+
+    <!-- Month 4: Aug -->
+    <rect x="265" y="40" width="20" height="200" rx="5" fill="url(#incomeBar)"/>
+    <rect x="289" y="165" width="20" height="75" rx="5" fill="url(#expenseBar)"/>
+    <text x="277" y="260" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="600">Aug</text>
+
+    <!-- Month 5: Sep -->
+    <rect x="345" y="45" width="20" height="195" rx="5" fill="url(#incomeBar)"/>
+    <rect x="369" y="155" width="20" height="85" rx="5" fill="url(#expenseBar)"/>
+    <text x="357" y="260" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="600">Sep</text>
+
+    <!-- Month 6: Oct -->
+    <rect x="425" y="30" width="20" height="210" rx="5" fill="url(#incomeBar)"/>
+    <rect x="449" y="145" width="20" height="95" rx="5" fill="url(#expenseBar)"/>
+    <text x="437" y="260" fill="#047857" font-family="Inter, sans-serif" font-size="11" font-weight="900">Oct</text>
+  </g>
+
+  <!-- Stat highlight strip at bottom -->
+  <rect x="48" y="504" width="532" height="74" rx="16" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="70" y="532" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="700">AVERAGE MONTHLY SAVINGS</text>
+  <text x="70" y="560" fill="#047857" font-family="Inter, sans-serif" font-size="22" font-weight="900">+₹52,400 / mo</text>
+
+  <line x1="280" y1="516" x2="280" y2="568" stroke="#CBD5E1" stroke-width="1"/>
+
+  <text x="310" y="532" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="700">SAVINGS RATE EFFICIENCY</text>
+  <text x="310" y="560" fill="#059669" font-family="Inter, sans-serif" font-size="22" font-weight="900">48.6% 🚀</text>
+
+
+  <!-- Right Column: Category Distribution & Top Merchants -->
+  <rect x="624" y="112" width="352" height="488" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+
+  <text x="648" y="142" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="16" font-weight="900">Expense Breakdown</text>
+  <text x="648" y="160" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Where your money went this month in ₹</text>
+
+  <!-- Donut Chart Center -->
+  <g transform="translate(800, 236)">
+    <!-- Arc 1: Rent (42%) -->
+    <circle cx="0" cy="0" r="54" stroke="#10B981" stroke-width="24" stroke-dasharray="142 340" fill="none"/>
+    <!-- Arc 2: Food & Groceries (28%) -->
+    <circle cx="0" cy="0" r="54" stroke="#059669" stroke-width="24" stroke-dasharray="95 340" stroke-dashoffset="-142" fill="none"/>
+    <!-- Arc 3: Leisure (12%) -->
+    <circle cx="0" cy="0" r="54" stroke="#34D399" stroke-width="24" stroke-dasharray="41 340" stroke-dashoffset="-237" fill="none"/>
+    <!-- Arc 4: Transit (10%) -->
+    <circle cx="0" cy="0" r="54" stroke="#6EE7B7" stroke-width="24" stroke-dasharray="34 340" stroke-dashoffset="-278" fill="none"/>
+    <!-- Arc 5: Others (8%) -->
+    <circle cx="0" cy="0" r="54" stroke="#A7F3D0" stroke-width="24" stroke-dasharray="28 340" stroke-dashoffset="-312" fill="none"/>
+
+    <text x="0" y="-4" text-anchor="middle" fill="#64748B" font-family="Inter, sans-serif" font-size="9" font-weight="700">TOTAL</text>
+    <text x="0" y="14" text-anchor="middle" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹28,450</text>
+  </g>
+
+  <!-- Ranked Categories Table -->
+  <g transform="translate(648, 326)">
+    <!-- Row 1 -->
+    <circle cx="8" cy="8" r="5" fill="#10B981"/>
+    <text x="22" y="12" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="700">Rent &amp; Housing</text>
+    <text x="250" y="12" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="900">₹18,000 (42%)</text>
+
+    <!-- Row 2 -->
+    <circle cx="8" cy="38" r="5" fill="#059669"/>
+    <text x="22" y="42" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="700">Blinkit &amp; Dining</text>
+    <text x="254" y="42" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="900">₹12,500 (28%)</text>
+
+    <!-- Row 3 -->
+    <circle cx="8" cy="68" r="5" fill="#34D399"/>
+    <text x="22" y="72" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="700">Weekend Leisure</text>
+    <text x="262" y="72" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="900">₹4,100 (12%)</text>
+
+    <!-- Row 4 -->
+    <circle cx="8" cy="98" r="5" fill="#6EE7B7"/>
+    <text x="22" y="102" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="700">Ola / Metro Transit</text>
+    <text x="262" y="102" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="900">₹3,200 (10%)</text>
+
+    <!-- Row 5 -->
+    <circle cx="8" cy="128" r="5" fill="#A7F3D0"/>
+    <text x="22" y="132" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="700">Other Miscellaneous</text>
+    <text x="270" y="132" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="900">₹2,650 (8%)</text>
+  </g>
+
+  <!-- Export Info Box -->
+  <rect x="648" y="492" width="304" height="88" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="664" y="516" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="800">📊 TAX &amp; ITR / GST READY</text>
+  <text x="664" y="536" fill="#64748B" font-family="Inter, sans-serif" font-size="10">Filter by financial year (FY 2026-27), export clean CSV spreadsheets compatible with Excel, Google Sheets &amp; Cleartax.</text>
+  <text x="664" y="564" fill="#059669" font-family="Inter, sans-serif" font-size="11" font-weight="800">✓ Instant 1-Click CSV Export</text>
+</svg>

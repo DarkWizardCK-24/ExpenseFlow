@@ -1,0 +1,167 @@
+<svg width="1000" height="620" viewBox="0 0 1000 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1000" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D1FAE5" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#F0FDF4"/>
+      <stop offset="1" stop-color="#ECFDF5"/>
+    </linearGradient>
+    <linearGradient id="primaryBtn" x1="0" y1="0" x2="140" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#047857"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="4" width="1000" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#059669" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="620" rx="28" fill="url(#bgGrad)"/>
+
+  <!-- Top Navigation & Header -->
+  <rect x="24" y="20" width="952" height="76" rx="20" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="48" y="54" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="20" font-weight="900">Transactions Vault 💸</text>
+  <text x="48" y="74" fill="#64748B" font-family="Inter, sans-serif" font-size="12">Track and organize daily expenses, UPI transfers, income credits, and card bills in ₹ (INR)</text>
+
+  <!-- View Switcher Pills: Timeline (active), List, Calendar -->
+  <rect x="650" y="38" width="206" height="40" rx="14" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <rect x="654" y="42" width="72" height="32" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="1.2"/>
+  <text x="664" y="62" fill="#047857" font-family="Inter, sans-serif" font-size="11" font-weight="900">Timeline</text>
+  <text x="738" y="62" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="600">List</text>
+  <text x="786" y="62" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="600">Calendar</text>
+
+  <!-- Add Button -->
+  <rect x="866" y="38" width="94" height="40" rx="14" fill="url(#primaryBtn)"/>
+  <text x="892" y="63" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="800">+ Add</text>
+
+
+  <!-- Left: Timeline View Column -->
+  <rect x="24" y="112" width="600" height="488" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  
+  <!-- Timeline Vertical Dashed Line -->
+  <line x1="58" y1="156" x2="58" y2="570" stroke="#10B981" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Day Header 1: Today, Oct 10 -->
+  <circle cx="58" cy="156" r="7" fill="#059669" stroke="#ECFDF5" stroke-width="4"/>
+  <text x="78" y="161" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="900">Today, 10 October 2026</text>
+  <rect x="478" y="146" width="126" height="24" rx="12" fill="#FEE2E2" stroke="#FECACA" stroke-width="1"/>
+  <text x="490" y="162" fill="#DC2626" font-family="Inter, sans-serif" font-size="11" font-weight="800">Net: -₹4,370.00</text>
+
+  <!-- Transaction Card 1: Blinkit Fresh Groceries -->
+  <g transform="translate(78, 178)">
+    <rect width="526" height="66" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="5" height="66" rx="2" fill="#10B981"/>
+    <rect x="16" y="13" width="40" height="40" rx="12" fill="#ECFDF5"/>
+    <text x="26" y="38" font-size="18">🥦</text>
+    <text x="68" y="32" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="800">Blinkit &amp; Nature's Basket</text>
+    <rect x="68" y="39" width="112" height="18" rx="6" fill="#F0FDF4"/>
+    <text x="74" y="52" fill="#059669" font-family="Inter, sans-serif" font-size="9" font-weight="800">UPI • Groceries &amp; Daily</text>
+    <text x="430" y="40" fill="#DC2626" font-family="Inter, sans-serif" font-size="16" font-weight="900">-₹3,450</text>
+  </g>
+
+  <!-- Transaction Card 2: Swiggy Gourmet Lunch -->
+  <g transform="translate(78, 252)">
+    <rect width="526" height="66" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="5" height="66" rx="2" fill="#F59E0B"/>
+    <rect x="16" y="13" width="40" height="40" rx="12" fill="#FEF3C7"/>
+    <text x="26" y="38" font-size="18">🍱</text>
+    <text x="68" y="32" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="800">Swiggy Gourmet Lunch</text>
+    <rect x="68" y="39" width="102" height="18" rx="6" fill="#FFFBEB"/>
+    <text x="74" y="52" fill="#D97706" font-family="Inter, sans-serif" font-size="9" font-weight="800">Card • Food &amp; Dining</text>
+    <text x="446" y="40" fill="#DC2626" font-family="Inter, sans-serif" font-size="16" font-weight="900">-₹920</text>
+  </g>
+
+  <!-- Day Header 2: Yesterday, Oct 9 -->
+  <circle cx="58" cy="344" r="7" fill="#10B981" stroke="#ECFDF5" stroke-width="4"/>
+  <text x="78" y="349" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="900">Yesterday, 9 October 2026</text>
+  <rect x="470" y="334" width="134" height="24" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="480" y="350" fill="#047857" font-family="Inter, sans-serif" font-size="11" font-weight="800">Net: +₹32,150.00</text>
+
+  <!-- Transaction Card 3: Freelance UI/UX Payment -->
+  <g transform="translate(78, 366)">
+    <rect width="526" height="66" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="5" height="66" rx="2" fill="#059669"/>
+    <rect x="16" y="13" width="40" height="40" rx="12" fill="#DCFCE7"/>
+    <text x="26" y="38" font-size="18">💼</text>
+    <text x="68" y="32" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="800">Freelance Design Consulting</text>
+    <rect x="68" y="39" width="100" height="18" rx="6" fill="#F0FDF4"/>
+    <text x="74" y="52" fill="#059669" font-family="Inter, sans-serif" font-size="9" font-weight="800">Bank • Professional</text>
+    <text x="424" y="40" fill="#059669" font-family="Inter, sans-serif" font-size="16" font-weight="900">+₹35,000</text>
+  </g>
+
+  <!-- Transaction Card 4: Electricity & Broadband -->
+  <g transform="translate(78, 440)">
+    <rect width="526" height="66" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="5" height="66" rx="2" fill="#EF4444"/>
+    <rect x="16" y="13" width="40" height="40" rx="12" fill="#FEE2E2"/>
+    <text x="26" y="38" font-size="18">⚡</text>
+    <text x="68" y="32" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="800">Electricity &amp; Wi-Fi Utilities</text>
+    <rect x="68" y="39" width="90" height="18" rx="6" fill="#FEF2F2"/>
+    <text x="74" y="52" fill="#DC2626" font-family="Inter, sans-serif" font-size="9" font-weight="800">UPI • Utilities &amp; Bills</text>
+    <text x="430" y="40" fill="#DC2626" font-family="Inter, sans-serif" font-size="16" font-weight="900">-₹2,850</text>
+  </g>
+
+  <!-- Transaction Card 5: Ola City Ride -->
+  <g transform="translate(78, 514)">
+    <rect width="526" height="66" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="5" height="66" rx="2" fill="#3B82F6"/>
+    <rect x="16" y="13" width="40" height="40" rx="12" fill="#DBEAFE"/>
+    <text x="26" y="38" font-size="18">🚗</text>
+    <text x="68" y="32" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="800">Ola City Ride &amp; Metro</text>
+    <rect x="68" y="39" width="105" height="18" rx="6" fill="#EFF6FF"/>
+    <text x="74" y="52" fill="#2563EB" font-family="Inter, sans-serif" font-size="9" font-weight="800">UPI • Transit &amp; Fuel</text>
+    <text x="448" y="40" fill="#DC2626" font-family="Inter, sans-serif" font-size="16" font-weight="900">-₹480</text>
+  </g>
+
+
+  <!-- Right Column: Quick Filters & Monthly Analytics Summary -->
+  <rect x="644" y="112" width="332" height="488" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+
+  <!-- Filter Header -->
+  <text x="664" y="142" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="14" font-weight="900">Search &amp; Smart Filters</text>
+  <text x="664" y="158" fill="#64748B" font-family="Inter, sans-serif" font-size="10">Filter transactions instantly across categories</text>
+
+  <!-- Filter Pills -->
+  <rect x="664" y="174" width="52" height="28" rx="8" fill="#059669"/>
+  <text x="676" y="192" fill="#FFFFFF" font-family="Inter" font-size="11" font-weight="800">All</text>
+
+  <rect x="722" y="174" width="76" height="28" rx="8" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="734" y="192" fill="#047857" font-family="Inter" font-size="11" font-weight="700">Income</text>
+
+  <rect x="804" y="174" width="82" height="28" rx="8" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="816" y="192" fill="#047857" font-family="Inter" font-size="11" font-weight="700">Expenses</text>
+
+  <!-- Payment Methods Filter Strip -->
+  <text x="664" y="230" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="800">PAYMENT METHODS</text>
+  
+  <rect x="664" y="242" width="60" height="24" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="674" y="258" fill="#047857" font-family="Inter" font-size="10" font-weight="700">📱 UPI</text>
+
+  <rect x="730" y="242" width="68" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="738" y="258" fill="#64748B" font-family="Inter" font-size="10" font-weight="700">💳 Card</text>
+
+  <rect x="804" y="242" width="70" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="812" y="258" fill="#64748B" font-family="Inter" font-size="10" font-weight="700">🏦 Bank</text>
+
+  <!-- Month Summary Card -->
+  <rect x="664" y="286" width="292" height="160" rx="16" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="680" y="312" fill="#047857" font-family="Inter, sans-serif" font-size="11" font-weight="900">OCTOBER SUMMARY (₹)</text>
+
+  <text x="680" y="336" fill="#64748B" font-family="Inter" font-size="11">Total Inflow:</text>
+  <text x="880" y="336" fill="#059669" font-family="Inter" font-size="12" font-weight="900">+₹85,000</text>
+
+  <text x="680" y="362" fill="#64748B" font-family="Inter" font-size="11">Total Outflow:</text>
+  <text x="880" y="362" fill="#DC2626" font-family="Inter" font-size="12" font-weight="900">-₹28,450</text>
+
+  <line x1="680" y1="376" x2="936" y2="376" stroke="#CBD5E1" stroke-width="1"/>
+
+  <text x="680" y="398" fill="#0B3B2E" font-family="Inter" font-size="12" font-weight="800">Net Balance:</text>
+  <text x="874" y="398" fill="#047857" font-family="Inter" font-size="14" font-weight="900">+₹56,550</text>
+
+  <text x="680" y="426" fill="#047857" font-family="Inter" font-size="10" font-weight="700">✓ On track with 48.6% savings goal</text>
+
+  <!-- Swipe Action Feature Info -->
+  <rect x="664" y="462" width="292" height="118" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="680" y="488" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="800">⚡ FAST SWIPE GESTURES</text>
+  <text x="680" y="508" fill="#64748B" font-family="Inter, sans-serif" font-size="10">Swipe left on any entry to reveal quick delete. On desktop, click the action icons to edit or remove records.</text>
+  <text x="680" y="546" fill="#059669" font-family="Inter, sans-serif" font-size="11" font-weight="700">✓ Realtime Cloud Firestore Sync</text>
+  <text x="680" y="564" fill="#059669" font-family="Inter, sans-serif" font-size="11" font-weight="700">✓ Offline IndexedDB Caching</text>
+</svg>

@@ -1,0 +1,136 @@
+<svg width="1000" height="620" viewBox="0 0 1000 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1000" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D1FAE5" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#F0FDF4"/>
+      <stop offset="1" stop-color="#ECFDF5"/>
+    </linearGradient>
+    <linearGradient id="primaryBtn" x1="0" y1="0" x2="160" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#047857"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="budgetCircle" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#059669"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="4" width="1000" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#059669" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="620" rx="28" fill="url(#bgGrad)"/>
+
+  <!-- Top App Navigation / Page Header -->
+  <rect x="24" y="20" width="952" height="76" rx="20" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="48" y="54" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="20" font-weight="900">Budgets &amp; Savings Goals 🎯</text>
+  <text x="48" y="74" fill="#64748B" font-family="Inter, sans-serif" font-size="12">Set monthly spending guardrails in ₹ (INR), trigger proactive threshold warnings, and hit milestone targets</text>
+
+  <!-- Period & New Goal Buttons -->
+  <rect x="700" y="38" width="122" height="40" rx="14" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="716" y="63" fill="#047857" font-family="Inter, sans-serif" font-size="12" font-weight="800">October 2026 ▾</text>
+
+  <rect x="832" y="38" width="128" height="40" rx="14" fill="url(#primaryBtn)"/>
+  <text x="852" y="63" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="800">+ New Goal</text>
+
+
+  <!-- Left Column: Monthly Overall Budget & Category Thresholds -->
+  <rect x="24" y="112" width="460" height="488" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+
+  <text x="48" y="142" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="16" font-weight="900">Monthly Spending Target</text>
+  <text x="48" y="160" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Automated threshold warnings at 80% and 100% capacity</text>
+
+  <!-- Dial / Circular Progress Center -->
+  <g transform="translate(160, 178)">
+    <circle cx="80" cy="80" r="70" stroke="#F1F5F9" stroke-width="16" fill="none"/>
+    <!-- 65% of 440 = 286 -->
+    <circle cx="80" cy="80" r="70" stroke="url(#budgetCircle)" stroke-width="16" stroke-linecap="round" stroke-dasharray="286 440" transform="rotate(-90 80 80)" fill="none"/>
+    
+    <text x="80" y="68" text-anchor="middle" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="700">SPENT</text>
+    <text x="80" y="94" text-anchor="middle" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="24" font-weight="900">₹32,400</text>
+    <text x="80" y="112" text-anchor="middle" fill="#059669" font-family="Inter, sans-serif" font-size="11" font-weight="800">65% of ₹50,000</text>
+  </g>
+
+  <!-- Budget Remaining Pill -->
+  <rect x="48" y="356" width="412" height="42" rx="14" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="64" y="382" fill="#047857" font-family="Inter, sans-serif" font-size="12" font-weight="800">Remaining to spend this month:</text>
+  <text x="350" y="382" fill="#047857" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹17,600.00</text>
+
+  <!-- Category Budget Bars -->
+  <text x="48" y="426" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="800">CATEGORY BREAKDOWN (₹)</text>
+
+  <!-- Cat 1: Groceries & Food -->
+  <text x="48" y="448" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="700">Food &amp; Groceries (Blinkit / Dining)</text>
+  <text x="350" y="448" fill="#64748B" font-family="Inter, sans-serif" font-size="11">₹12,500 / ₹15,000</text>
+  <rect x="48" y="456" width="412" height="8" rx="4" fill="#F1F5F9"/>
+  <rect x="48" y="456" width="343" height="8" rx="4" fill="#10B981"/>
+
+  <!-- Cat 2: Housing & Bills -->
+  <text x="48" y="482" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="700">Rent &amp; Society Maintenance</text>
+  <text x="350" y="482" fill="#DC2626" font-family="Inter, sans-serif" font-size="11" font-weight="700">₹18,000 / ₹18,000 (100%)</text>
+  <rect x="48" y="490" width="412" height="8" rx="4" fill="#F1F5F9"/>
+  <rect x="48" y="490" width="412" height="8" rx="4" fill="#EF4444"/>
+
+  <!-- Cat 3: Transit & Fuel -->
+  <text x="48" y="516" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="700">Transit, Fuel &amp; Metro</text>
+  <text x="370" y="516" fill="#64748B" font-family="Inter, sans-serif" font-size="11">₹3,200 / ₹5,000</text>
+  <rect x="48" y="524" width="412" height="8" rx="4" fill="#F1F5F9"/>
+  <rect x="48" y="524" width="263" height="8" rx="4" fill="#10B981"/>
+
+  <!-- Cat 4: Entertainment & Leisure -->
+  <text x="48" y="550" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="700">Weekend Entertainment &amp; OTT</text>
+  <text x="370" y="550" fill="#64748B" font-family="Inter, sans-serif" font-size="11">₹4,100 / ₹6,000</text>
+  <rect x="48" y="558" width="412" height="8" rx="4" fill="#F1F5F9"/>
+  <rect x="48" y="558" width="281" height="8" rx="4" fill="#10B981"/>
+
+
+  <!-- Right Column: Active Savings Goals & Milestones in INR -->
+  <rect x="504" y="112" width="472" height="488" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+
+  <text x="528" y="142" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="16" font-weight="900">Milestone Savings Goals 🚀</text>
+  <text x="528" y="160" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Automate deposits toward dream travels, rainy-day safety, and tech upgrades in ₹</text>
+
+  <!-- Goal Card 1: Trip to Tokyo & Kyoto -->
+  <rect x="528" y="178" width="424" height="118" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="544" y="192" width="48" height="48" rx="14" fill="#EFF6FF"/>
+  <text x="557" y="222" font-size="22">⛩️</text>
+  <text x="604" y="209" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="14" font-weight="800">Trip to Tokyo &amp; Kyoto</text>
+  <text x="604" y="225" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Target date: Nov 2026 • 74% achieved</text>
+  <text x="852" y="210" fill="#047857" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹1,85,000</text>
+  <text x="862" y="226" fill="#64748B" font-family="Inter, sans-serif" font-size="10">of ₹2,50,000</text>
+
+  <!-- Progress Bar -->
+  <rect x="544" y="252" width="400" height="8" rx="4" fill="#F1F5F9"/>
+  <rect x="544" y="252" width="296" height="8" rx="4" fill="#3B82F6"/>
+  <text x="544" y="278" fill="#3B82F6" font-family="Inter, sans-serif" font-size="11" font-weight="800">+₹25,000 contributed this month</text>
+  <text x="830" y="278" fill="#64748B" font-family="Inter, sans-serif" font-size="11">₹65,000 remaining</text>
+
+  <!-- Goal Card 2: 6-Month Emergency Safety Fund -->
+  <rect x="528" y="312" width="424" height="118" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="544" y="326" width="48" height="48" rx="14" fill="#ECFDF5"/>
+  <text x="557" y="356" font-size="22">🛡️</text>
+  <text x="604" y="343" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="14" font-weight="800">6-Month Emergency Fund</text>
+  <text x="604" y="359" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Target date: Dec 2026 • 70% achieved</text>
+  <text x="852" y="344" fill="#047857" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹2,10,000</text>
+  <text x="862" y="360" fill="#64748B" font-family="Inter, sans-serif" font-size="10">of ₹3,00,000</text>
+
+  <!-- Progress Bar -->
+  <rect x="544" y="386" width="400" height="8" rx="4" fill="#F1F5F9"/>
+  <rect x="544" y="386" width="280" height="8" rx="4" fill="#10B981"/>
+  <text x="544" y="412" fill="#059669" font-family="Inter, sans-serif" font-size="11" font-weight="800">Automated SIP / recurring deposit active</text>
+  <text x="830" y="412" fill="#64748B" font-family="Inter, sans-serif" font-size="11">₹90,000 remaining</text>
+
+  <!-- Goal Card 3: MacBook Pro M4 Workstation -->
+  <rect x="528" y="446" width="424" height="118" rx="16" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5"/>
+  <rect x="544" y="460" width="48" height="48" rx="14" fill="#FEF3C7"/>
+  <text x="557" y="490" font-size="22">💻</text>
+  <text x="604" y="477" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="14" font-weight="800">Apple MacBook Pro M4</text>
+  <text x="604" y="493" fill="#059669" font-family="Inter, sans-serif" font-size="11" font-weight="700">🎉 100% Achieved • Goal Completed!</text>
+  <text x="852" y="478" fill="#047857" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹1,69,900</text>
+  <text x="862" y="494" fill="#64748B" font-family="Inter, sans-serif" font-size="10">of ₹1,69,900</text>
+
+  <!-- Progress Bar -->
+  <rect x="544" y="520" width="400" height="8" rx="4" fill="#F1F5F9"/>
+  <rect x="544" y="520" width="400" height="8" rx="4" fill="#059669"/>
+  <text x="544" y="546" fill="#047857" font-family="Inter, sans-serif" font-size="11" font-weight="800">✓ Ready to purchase • Funds locked in vault</text>
+  <text x="860" y="546" fill="#059669" font-family="Inter, sans-serif" font-size="11" font-weight="800">COMPLETED</text>
+</svg>

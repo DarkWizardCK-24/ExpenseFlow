@@ -1,0 +1,171 @@
+<svg width="1000" height="620" viewBox="0 0 1000 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1000" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D1FAE5" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#F0FDF4"/>
+      <stop offset="1" stop-color="#ECFDF5"/>
+    </linearGradient>
+    <linearGradient id="primaryBtn" x1="0" y1="0" x2="160" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#047857"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="groupBanner" x1="0" y1="0" x2="600" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#064E3B"/>
+      <stop offset="0.6" stop-color="#059669"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="4" width="1000" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#059669" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="620" rx="28" fill="url(#bgGrad)"/>
+
+  <!-- Top App Navigation / Page Title -->
+  <rect x="24" y="20" width="952" height="76" rx="20" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="48" y="54" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="20" font-weight="900">Split Bills &amp; Groups 👥</text>
+  <text x="48" y="74" fill="#64748B" font-family="Inter, sans-serif" font-size="12">Divide shared expenses fairly in ₹ (INR) with automated greedy debt simplification</text>
+
+  <!-- Group Switcher & Add Group Button -->
+  <rect x="670" y="38" width="150" height="40" rx="14" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="686" y="63" fill="#047857" font-family="Inter, sans-serif" font-size="12" font-weight="800">🏖️ Goa Villa Trip ▾</text>
+
+  <rect x="832" y="38" width="128" height="40" rx="14" fill="url(#primaryBtn)"/>
+  <text x="852" y="63" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="800">+ Split Expense</text>
+
+
+  <!-- Left Column: Active Group Detail & Expenses -->
+  <rect x="24" y="112" width="600" height="488" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+
+  <!-- Group Header Banner -->
+  <rect x="40" y="128" width="568" height="96" rx="18" fill="url(#groupBanner)"/>
+  <text x="64" y="160" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="20" font-weight="900">Goa Weekend Private Villa</text>
+  <text x="64" y="180" fill="#A7F3D0" font-family="Inter, sans-serif" font-size="12">Created by Arjun Sharma • 4 Members • INR (₹)</text>
+
+  <!-- Group Aggregate Pill Badges -->
+  <rect x="64" y="190" width="130" height="22" rx="6" fill="#064E3B" fill-opacity="0.6"/>
+  <text x="74" y="205" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="700">Total Spent: ₹48,000</text>
+
+  <rect x="204" y="190" width="150" height="22" rx="6" fill="#10B981" fill-opacity="0.35"/>
+  <text x="214" y="205" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="800">You are owed: +₹14,500</text>
+
+  <!-- Member Balances -->
+  <text x="44" y="248" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="800">MEMBER BALANCES</text>
+
+  <!-- Member 1: You (AS) -->
+  <rect x="44" y="260" width="128" height="58" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <rect x="52" y="270" width="38" height="38" rx="10" fill="#047857"/>
+  <text x="61" y="294" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="900">AS</text>
+  <text x="96" y="284" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="700">You (Arjun)</text>
+  <text x="96" y="300" fill="#059669" font-family="Inter, sans-serif" font-size="11" font-weight="900">+₹14,500</text>
+
+  <!-- Member 2: Priya M. (PM) -->
+  <rect x="180" y="260" width="128" height="58" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="188" y="270" width="38" height="38" rx="10" fill="#8B5CF6"/>
+  <text x="197" y="294" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="900">PM</text>
+  <text x="232" y="284" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="700">Priya M.</text>
+  <text x="232" y="300" fill="#DC2626" font-family="Inter, sans-serif" font-size="11" font-weight="900">-₹6,000</text>
+
+  <!-- Member 3: Rohan K. (RK) -->
+  <rect x="316" y="260" width="128" height="58" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="324" y="270" width="38" height="38" rx="10" fill="#3B82F6"/>
+  <text x="333" y="294" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="900">RK</text>
+  <text x="368" y="284" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="700">Rohan K.</text>
+  <text x="368" y="300" fill="#DC2626" font-family="Inter, sans-serif" font-size="11" font-weight="900">-₹8,500</text>
+
+  <!-- Member 4: Ananya S. (AN) -->
+  <rect x="452" y="260" width="128" height="58" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="460" y="270" width="38" height="38" rx="10" fill="#EC4899"/>
+  <text x="469" y="294" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="11" font-weight="900">AN</text>
+  <text x="504" y="284" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="700">Ananya S.</text>
+  <text x="504" y="300" fill="#64748B" font-family="Inter, sans-serif" font-size="11" font-weight="900">₹0.00</text>
+
+  <!-- Recent Group Expenses -->
+  <text x="44" y="344" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="12" font-weight="800">RECENT GROUP SPLITS (₹)</text>
+
+  <!-- Expense Item 1: Beach Villa Airbnb -->
+  <rect x="40" y="356" width="568" height="66" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="52" y="369" width="40" height="40" rx="12" fill="#FEF3C7"/>
+  <text x="63" y="395" font-size="18">🏡</text>
+  <text x="102" y="385" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="800">Beachfront Villa 3 Nights</text>
+  <text x="102" y="401" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Paid by Arjun S. • Split equally across 4 members</text>
+  <text x="480" y="386" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹24,000</text>
+  <text x="480" y="402" fill="#059669" font-family="Inter, sans-serif" font-size="10" font-weight="800">You lent ₹18,000</text>
+
+  <!-- Expense Item 2: Seafood Shack Dinner -->
+  <rect x="40" y="430" width="568" height="66" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="52" y="443" width="40" height="40" rx="12" fill="#DBEAFE"/>
+  <text x="63" y="469" font-size="18">🦞</text>
+  <text x="102" y="459" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="800">Fisherman's Wharf Seafood Dinner</text>
+  <text x="102" y="475" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Paid by Rohan K. • Split 25% each</text>
+  <text x="490" y="460" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹8,000</text>
+  <text x="490" y="476" fill="#DC2626" font-family="Inter, sans-serif" font-size="10" font-weight="800">You owe ₹2,000</text>
+
+  <!-- Expense Item 3: Scooter & Fuel -->
+  <rect x="40" y="504" width="568" height="66" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="52" y="517" width="40" height="40" rx="12" fill="#DCFCE7"/>
+  <text x="63" y="543" font-size="18">🛵</text>
+  <text x="102" y="533" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="800">Activa Rentals &amp; Fuel</text>
+  <text x="102" y="549" fill="#64748B" font-family="Inter, sans-serif" font-size="11">Paid by Priya M. • Split by exact shares</text>
+  <text x="490" y="534" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹4,000</text>
+  <text x="490" y="550" fill="#DC2626" font-family="Inter, sans-serif" font-size="10" font-weight="800">You owe ₹1,500</text>
+
+
+  <!-- Right Column: Greedy Debt Simplification & Settle Card -->
+  <rect x="644" y="112" width="332" height="488" rx="22" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="1.2" filter="url(#shadow)"/>
+
+  <!-- Header -->
+  <rect x="664" y="128" width="292" height="40" rx="12" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="680" y="153" fill="#047857" font-family="Inter, sans-serif" font-size="12" font-weight="900">⚡ SMART DEBT SIMPLIFICATION</text>
+
+  <text x="664" y="190" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="13" font-weight="800">Minimal Payments Needed</text>
+  <text x="664" y="206" fill="#64748B" font-family="Inter, sans-serif" font-size="10">Algorithm condensed 6 tangled debts into 2 simple settlements</text>
+
+  <!-- Debt Card 1: Rohan K -> You -->
+  <rect x="664" y="218" width="292" height="88" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="676" y="230" width="32" height="32" rx="8" fill="#3B82F6"/>
+  <text x="683" y="250" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="900">RK</text>
+  <text x="716" y="242" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="800">Rohan Kapoor</text>
+  <text x="716" y="255" fill="#64748B" font-family="Inter, sans-serif" font-size="10">owes you directly</text>
+  <text x="880" y="250" fill="#047857" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹8,500</text>
+  <!-- Settle Button -->
+  <rect x="676" y="270" width="268" height="26" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="760" y="287" fill="#059669" font-family="Inter, sans-serif" font-size="10" font-weight="800">Record UPI Settlement ✓</text>
+
+  <!-- Debt Card 2: Priya M -> You -->
+  <rect x="664" y="314" width="292" height="88" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="676" y="326" width="32" height="32" rx="8" fill="#8B5CF6"/>
+  <text x="683" y="346" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="10" font-weight="900">PM</text>
+  <text x="716" y="338" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="800">Priya Mehta</text>
+  <text x="716" y="351" fill="#64748B" font-family="Inter, sans-serif" font-size="10">owes you directly</text>
+  <text x="880" y="346" fill="#047857" font-family="Inter, sans-serif" font-size="15" font-weight="900">₹6,000</text>
+  <!-- Settle Button -->
+  <rect x="676" y="366" width="268" height="26" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="760" y="383" fill="#059669" font-family="Inter, sans-serif" font-size="10" font-weight="800">Record UPI Settlement ✓</text>
+
+  <!-- Split Methods Showcase Badge -->
+  <rect x="664" y="416" width="292" height="168" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="680" y="438" fill="#0B3B2E" font-family="Inter, sans-serif" font-size="11" font-weight="800">4 POWERFUL SPLIT METHODS</text>
+
+  <!-- Split Pill 1: Equal -->
+  <rect x="680" y="450" width="60" height="22" rx="6" fill="#059669"/>
+  <text x="696" y="465" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="9" font-weight="800">Equal =</text>
+
+  <!-- Split Pill 2: Exact -->
+  <rect x="746" y="450" width="60" height="22" rx="6" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="760" y="465" fill="#047857" font-family="Inter, sans-serif" font-size="9" font-weight="800">Exact ₹</text>
+
+  <!-- Split Pill 3: Percent -->
+  <rect x="812" y="450" width="68" height="22" rx="6" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="826" y="465" fill="#047857" font-family="Inter, sans-serif" font-size="9" font-weight="800">Percent %</text>
+
+  <!-- Split Pill 4: Shares -->
+  <rect x="886" y="450" width="58" height="22" rx="6" fill="#F0FDF4" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="898" y="465" fill="#047857" font-family="Inter, sans-serif" font-size="9" font-weight="800">Shares #</text>
+
+  <text x="680" y="496" fill="#64748B" font-family="Inter, sans-serif" font-size="10">✓ Realtime Multi-User Cloud Sync</text>
+  <text x="680" y="514" fill="#64748B" font-family="Inter, sans-serif" font-size="10">✓ Full Group Audit Trail &amp; Activity Log</text>
+  <text x="680" y="532" fill="#64748B" font-family="Inter, sans-serif" font-size="10">✓ UPI &amp; Bank Transfer Settlement Note</text>
+  <text x="680" y="550" fill="#64748B" font-family="Inter, sans-serif" font-size="10">✓ Zero Commission, Zero Math Friction</text>
+  <text x="680" y="568" fill="#64748B" font-family="Inter, sans-serif" font-size="10">✓ Works Seamlessly Offline</text>
+</svg>
