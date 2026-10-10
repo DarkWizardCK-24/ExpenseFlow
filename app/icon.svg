@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="0.55" stop-color="#059669"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+
+  <!-- cards peeking out of the wallet -->
+  <rect x="150" y="104" width="196" height="132" rx="22" fill="#a7f3d0" transform="rotate(-10 248 170)"/>
+  <rect x="176" y="118" width="196" height="132" rx="22" fill="#ecfdf5" transform="rotate(8 274 184)"/>
+  <rect x="198" y="146" width="150" height="16" rx="8" fill="#10b981" transform="rotate(8 274 184)"/>
+
+  <!-- wallet body -->
+  <rect x="88" y="192" width="320" height="224" rx="44" fill="#ffffff"/>
+
+  <!-- clasp -->
+  <rect x="300" y="262" width="132" height="84" rx="42" fill="#047857"/>
+  <circle cx="346" cy="304" r="17" fill="#ffffff"/>
+
+  <!-- rising trend -->
+  <g transform="translate(-14 4)" fill="none" stroke="#10b981" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M128 372L182 322L222 350L272 300"/>
+    <path d="M232 296H276V340"/>
+  </g>
+</svg>
