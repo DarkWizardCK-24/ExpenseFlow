@@ -233,7 +233,6 @@ export function useGroups() {
       const groupsRef = collection(db, 'groups');
       const docRef = await addDoc(groupsRef, groupPayload);
 
-      // Create initial log
       const logsRef = collection(db, 'groups', docRef.id, 'logs');
       await addDoc(logsRef, {
         type: 'created',
@@ -301,7 +300,6 @@ export function useGroupDetail(gid: string) {
     if (!gid) return;
 
     if (isDemoMode || !isFirebaseConfigured || !user) {
-      // Demo detail
       const found = readDemoGroups().find((g) => g.id === gid) || null;
       setGroup(found);
 
@@ -320,7 +318,6 @@ export function useGroupDetail(gid: string) {
 
     setLoading(true);
 
-    // 1. Group info
     const groupRef = doc(db, 'groups', gid);
     const unsubGroup = onSnapshot(groupRef, (docSnap) => {
       if (docSnap.exists()) {
@@ -330,7 +327,6 @@ export function useGroupDetail(gid: string) {
       }
     });
 
-    // 2. Expenses
     const expRef = collection(db, 'groups', gid, 'expenses');
     const unsubExp = onSnapshot(expRef, (snap) => {
       const list: GroupExpense[] = [];
@@ -339,7 +335,6 @@ export function useGroupDetail(gid: string) {
       setExpenses(list);
     });
 
-    // 3. Settlements
     const setRef = collection(db, 'groups', gid, 'settlements');
     const unsubSet = onSnapshot(setRef, (snap) => {
       const list: GroupSettlement[] = [];
@@ -348,7 +343,6 @@ export function useGroupDetail(gid: string) {
       setSettlements(list);
     });
 
-    // 4. Logs
     const logRef = collection(db, 'groups', gid, 'logs');
     const unsubLog = onSnapshot(logRef, (snap) => {
       const list: GroupActivityLog[] = [];

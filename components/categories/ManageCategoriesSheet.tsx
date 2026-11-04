@@ -133,7 +133,7 @@ const ManageCategoriesContent: React.FC<ManageCategoriesSheetProps> = ({ isOpen,
                           }
                           title={
                             inUse
-                              ? `Used by ${usage} transaction${usage === 1 ? '' : 's'} — reassign them before deleting`
+                              ? `Used by ${usage} transaction${usage === 1 ? '' : 's'}. Reassign them before deleting`
                               : 'Delete'
                           }
                           disabled={inUse}

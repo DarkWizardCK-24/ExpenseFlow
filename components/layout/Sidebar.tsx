@@ -20,7 +20,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSignOutRequest, onAddTransac
 
   return (
     <aside className="hidden md:flex flex-col w-64 lg:w-72 flex-shrink-0 bg-white/90 backdrop-blur-md border-r border-emerald-100/80 p-4 sticky top-0 h-screen z-30">
-      {/* Brand */}
       <Link
         href="/dashboard"
         className="flex items-center gap-3 px-2 py-3 mb-4 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50"
@@ -47,7 +46,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSignOutRequest, onAddTransac
         </button>
       )}
 
-      {/* Navigation */}
       <nav aria-label="Main navigation" className="flex-1 overflow-y-auto no-scrollbar">
         <p className="px-3 mb-2 text-[11px] font-medium uppercase tracking-wider text-slate-400">Menu</p>
         <ul className="space-y-1">
@@ -89,7 +87,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ onSignOutRequest, onAddTransac
         </ul>
       </nav>
 
-      {/* User card */}
       <div className="pt-4 mt-4 border-t border-emerald-100/80 space-y-1">
         <Link
           href="/profile"

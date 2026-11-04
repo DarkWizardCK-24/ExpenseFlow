@@ -158,7 +158,6 @@ function TransactionsContent({ onManageCategories }: { onManageCategories: () =>
 
   return (
     <div className="space-y-5">
-      {/* Page header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
           <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0b3b2e]">Transactions</h1>
@@ -175,7 +174,6 @@ function TransactionsContent({ onManageCategories }: { onManageCategories: () =>
         </div>
       </div>
 
-      {/* Summary strip (filtered set) */}
       <div className="grid grid-cols-3 gap-2 sm:gap-4">
         <SummaryTile
           label="Income"
@@ -201,7 +199,6 @@ function TransactionsContent({ onManageCategories }: { onManageCategories: () =>
         />
       </div>
 
-      {/* Filters */}
       <div className="bg-white rounded-2xl border border-slate-100 shadow-card p-3 sm:p-4 space-y-3">
         <div className="flex flex-col lg:flex-row gap-2 sm:gap-3">
           <div className="relative flex-1 min-w-0">
@@ -326,7 +323,6 @@ function TransactionsContent({ onManageCategories }: { onManageCategories: () =>
         </div>
       </div>
 
-      {/* Results toolbar */}
       <div className="flex items-center justify-between gap-3">
         <p className="text-sm text-[#64748b]" aria-live="polite">
           {loading ? (
@@ -358,7 +354,6 @@ function TransactionsContent({ onManageCategories }: { onManageCategories: () =>
         </div>
       </div>
 
-      {/* Content */}
       {loading ? (
         <div className="space-y-3">
           <Skeleton className="h-4 w-28" />
@@ -427,7 +422,6 @@ function TransactionsContent({ onManageCategories }: { onManageCategories: () =>
         </div>
       )}
 
-      {/* Add transaction */}
       <Sheet
         isOpen={addOpen}
         onClose={() => setAddOpen(false)}
@@ -446,7 +440,6 @@ function TransactionsContent({ onManageCategories }: { onManageCategories: () =>
         />
       </Sheet>
 
-      {/* Edit transaction (prefilled) */}
       <Sheet
         isOpen={Boolean(editingTx)}
         onClose={() => setEditingTx(null)}
@@ -468,7 +461,6 @@ function TransactionsContent({ onManageCategories }: { onManageCategories: () =>
         )}
       </Sheet>
 
-      {/* Quick-create category from within the transaction form */}
       <Sheet
         isOpen={categoryFormOpen}
         onClose={() => setCategoryFormOpen(false)}

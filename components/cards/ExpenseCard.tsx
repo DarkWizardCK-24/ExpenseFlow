@@ -82,7 +82,6 @@ export const ExpenseCard: React.FC<ExpenseCardProps> = ({
   return (
     <>
       <div className={`relative overflow-hidden rounded-2xl select-none group ${className}`}>
-        {/* Swipe reveal zone */}
         {!disableSwipe && (
           <div
             aria-hidden="true"
@@ -92,13 +91,11 @@ export const ExpenseCard: React.FC<ExpenseCardProps> = ({
           </div>
         )}
 
-        {/* Card body */}
         <div
           {...swipeProps}
           className="relative z-10 bg-white rounded-2xl shadow-card border border-slate-100 p-3.5 sm:p-4 transition-shadow hover:shadow-card-hover flex items-center gap-3"
           style={disableSwipe ? undefined : dragProps.style}
         >
-          {/* Category icon */}
           <div
             style={{ backgroundColor: `${categoryColor}1f` }}
             className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
@@ -107,7 +104,6 @@ export const ExpenseCard: React.FC<ExpenseCardProps> = ({
             {categoryEmoji}
           </div>
 
-          {/* Title + meta */}
           <div className="min-w-0 flex-1">
             <h4 className="font-medium text-sm text-[#0b3b2e] truncate">{transaction.title}</h4>
             <div className="flex items-center gap-1.5 mt-1 text-xs text-[#64748b] min-w-0">
@@ -142,7 +138,6 @@ export const ExpenseCard: React.FC<ExpenseCardProps> = ({
             )}
           </div>
 
-          {/* Amount + actions (stacked on mobile, inline on larger screens) */}
           <div className="flex flex-col sm:flex-row items-end sm:items-center gap-0.5 sm:gap-3 flex-shrink-0">
             <span
               className={`text-sm sm:text-base font-semibold tabular-nums whitespace-nowrap ${

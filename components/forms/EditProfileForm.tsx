@@ -87,7 +87,7 @@ export const EditProfileForm: React.FC<EditProfileFormProps> = ({ userProfile, o
         placeholder="+91 98765 43210"
         autoComplete="tel"
         icon={<Phone className="w-4 h-4" />}
-        helperText="Optional — helps friends find you in split groups"
+        helperText="Optional, helps friends find you in split groups"
         {...register('phone')}
       />
 
@@ -101,7 +101,7 @@ export const EditProfileForm: React.FC<EditProfileFormProps> = ({ userProfile, o
         >
           {SUPPORTED_CURRENCIES.map((c) => (
             <option key={c.code} value={c.code}>
-              {c.flag} {c.code} ({c.symbol.trim()}) — {c.name}
+              {c.flag} {c.code} ({c.symbol.trim()}), {c.name}
             </option>
           ))}
         </select>
@@ -147,7 +147,6 @@ export const EditProfileForm: React.FC<EditProfileFormProps> = ({ userProfile, o
         )}
       </div>
 
-      {/* Actions — pinned to the bottom of the sheet while scrolling */}
       <div className="sticky -bottom-5 -mx-6 px-6 py-4 bg-white/95 backdrop-blur border-t border-emerald-100/80 grid grid-cols-[auto_1fr] gap-3">
         <Button type="button" variant="outline" onClick={onCancel} disabled={submitting}>
           Cancel

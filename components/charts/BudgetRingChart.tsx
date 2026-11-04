@@ -40,7 +40,6 @@ export const BudgetRingChart: React.FC<BudgetRingChartProps> = ({
 
   return (
     <div className="flex flex-col sm:flex-row items-center gap-6">
-      {/* Ring */}
       <div
         className="relative w-40 h-40 flex items-center justify-center flex-shrink-0"
         role="img"
@@ -73,7 +72,6 @@ export const BudgetRingChart: React.FC<BudgetRingChartProps> = ({
         </div>
       </div>
 
-      {/* Details */}
       <div className="flex-1 w-full min-w-0 space-y-3">
         <dl className="space-y-2 text-sm">
           <div className="flex items-baseline justify-between gap-3">
@@ -111,7 +109,7 @@ export const BudgetRingChart: React.FC<BudgetRingChartProps> = ({
             <span>
               Over 80% used
               {showDailyAllowance && hasBudget
-                ? ` — about ${formatCurrency(Math.floor(dailyAllowance), currency)}/day left for ${daysLeft} day${daysLeft === 1 ? '' : 's'}.`
+                ? `. About ${formatCurrency(Math.floor(dailyAllowance), currency)}/day left for ${daysLeft} day${daysLeft === 1 ? '' : 's'}.`
                 : '.'}
             </span>
           </div>
@@ -121,7 +119,7 @@ export const BudgetRingChart: React.FC<BudgetRingChartProps> = ({
             <span>
               On track
               {showDailyAllowance && hasBudget
-                ? ` — you can spend about ${formatCurrency(Math.floor(dailyAllowance), currency)}/day for the next ${daysLeft} day${daysLeft === 1 ? '' : 's'}.`
+                ? `. You can spend about ${formatCurrency(Math.floor(dailyAllowance), currency)}/day for the next ${daysLeft} day${daysLeft === 1 ? '' : 's'}.`
                 : '.'}
             </span>
           </div>

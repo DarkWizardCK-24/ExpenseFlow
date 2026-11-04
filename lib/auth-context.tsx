@@ -69,7 +69,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isDemoMode, setIsDemoMode] = useState(false);
 
   useEffect(() => {
-    // Check if demo mode was previously active
     const savedDemo = typeof window !== 'undefined' ? localStorage.getItem('expenseflow_demo_mode') : null;
     if (savedDemo === 'true') {
       setIsDemoMode(true);
@@ -88,12 +87,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (currentUser) {
         const userDocRef = doc(db, 'users', currentUser.uid);
         
-        // Listen to realtime profile changes
         const unsubsProfile = onSnapshot(userDocRef, async (docSnap) => {
           if (docSnap.exists()) {
             setUserProfile(docSnap.data() as UserProfile);
           } else {
-            // First time login - initialize profile
+            // first login
             const newProfile: UserProfile = {
               uid: currentUser.uid,
               name: currentUser.displayName || 'ExpenseFlow User',

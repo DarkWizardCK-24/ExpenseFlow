@@ -19,7 +19,6 @@ export function computeGroupBalances(
     map[m.id] = { totalPaid: 0, totalShare: 0, netSettlement: 0 };
   }
 
-  // 1. Accumulate expenses
   for (const exp of expenses) {
     const paidBy = exp.paidBy;
     if (map[paidBy]) {
@@ -35,7 +34,6 @@ export function computeGroupBalances(
     }
   }
 
-  // 2. Accumulate settlements
   // If `from` pays `to` an amount X:
   // `from` paid off debt, so netSettlement for `from` increases by X (+X)
   // `to` received payment, so netSettlement for `to` decreases by X (-X)
@@ -61,9 +59,7 @@ export function computeGroupBalances(
   });
 }
 
-/**
- * Greedy minimum-transaction algorithm to simplify debts
- */
+// Greedy: repeatedly match the biggest debtor with the biggest creditor.
 export function simplifyDebts(memberBalances: MemberBalanceInfo[]): DebtSimplification[] {
   interface Account {
     memberId: string;
@@ -119,9 +115,6 @@ export function simplifyDebts(memberBalances: MemberBalanceInfo[]): DebtSimplifi
   return transactions;
 }
 
-/**
- * Calculate split allocations based on split type
- */
 export function calculateSplits(
   totalAmount: number,
   memberIds: string[],

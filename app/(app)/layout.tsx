@@ -29,7 +29,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { createGroup } = useGroups();
   const { createGoal } = useGoals();
 
-  // Modals state
   const [expenseModalOpen, setExpenseModalOpen] = useState(false);
   const [groupModalOpen, setGroupModalOpen] = useState(false);
   const [goalModalOpen, setGoalModalOpen] = useState(false);
@@ -48,14 +47,12 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     []
   );
 
-  // Client Auth Guard
   useEffect(() => {
     if (!loading && !user && !isDemoMode) {
       router.push('/login');
     }
   }, [user, loading, isDemoMode, router]);
 
-  // Full-screen splash loader
   if (loading) {
     return (
       <div className="fixed inset-0 bg-gradient-to-br from-[#d1fae5] via-[#f0fdf4] to-[#ecfdf5] flex flex-col items-center justify-center z-50">
@@ -72,7 +69,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   }
 
   if (!user && !isDemoMode) {
-    return null; // Will redirect in useEffect
+    return null;
   }
 
   const handleSignOut = async () => {
@@ -97,34 +94,27 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           Skip to content
         </a>
 
-        {/* Desktop Sidebar (md+) */}
         <Sidebar
           onSignOutRequest={() => setSignOutConfirmOpen(true)}
           onAddTransaction={() => setExpenseModalOpen(true)}
         />
 
-        {/* Main Content Area */}
         <div className="flex-1 flex flex-col min-w-0 pb-[calc(6rem+env(safe-area-inset-bottom))] md:pb-10">
-          {/* App Header */}
           <Header />
 
-          {/* Child Pages */}
           <main id="main-content" className="flex-1 max-w-7xl w-full mx-auto px-4 py-5 sm:p-6 lg:p-8">
             {children}
           </main>
         </div>
 
-        {/* Mobile Bottom Tab Bar (below md) */}
         <BottomNav />
 
-        {/* Floating Action Button */}
         <FAB
           onAddExpense={() => setExpenseModalOpen(true)}
           onAddSplitGroup={() => setGroupModalOpen(true)}
           onAddGoal={() => setGoalModalOpen(true)}
         />
 
-        {/* Global Add Expense Sheet */}
         <Sheet
           isOpen={expenseModalOpen}
           onClose={() => setExpenseModalOpen(false)}
@@ -142,7 +132,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           />
         </Sheet>
 
-        {/* Global Add Category Sheet */}
         <Sheet
           isOpen={categoryModalOpen}
           onClose={() => setCategoryModalOpen(false)}
@@ -158,7 +147,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           />
         </Sheet>
 
-        {/* Global Add Split Group Sheet */}
         <Sheet
           isOpen={groupModalOpen}
           onClose={() => setGroupModalOpen(false)}
@@ -174,7 +162,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           />
         </Sheet>
 
-        {/* Global Add Goal Sheet */}
         <Sheet
           isOpen={goalModalOpen}
           onClose={() => setGoalModalOpen(false)}
@@ -190,7 +177,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           />
         </Sheet>
 
-        {/* Sign Out Confirmation Dialog */}
         <ConfirmDialog
           isOpen={signOutConfirmOpen}
           onClose={() => setSignOutConfirmOpen(false)}

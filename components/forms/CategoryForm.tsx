@@ -84,7 +84,6 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({ initialData, onSubmi
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-5">
-      {/* Live preview */}
       <div
         className="rounded-2xl border p-4 flex items-center gap-3 transition-colors"
         style={{ backgroundColor: `${currentColor}10`, borderColor: `${currentColor}33` }}
@@ -110,7 +109,6 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({ initialData, onSubmi
         error={errors.name?.message}
       />
 
-      {/* Emoji Picker */}
       <div>
         <SectionLabel id="cat-emoji-label">Icon</SectionLabel>
         <div
@@ -141,7 +139,6 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({ initialData, onSubmi
         {errors.emoji && <p className="text-xs font-medium text-red-500 mt-1">{errors.emoji.message}</p>}
       </div>
 
-      {/* Color Picker */}
       <div>
         <SectionLabel id="cat-color-label">Color</SectionLabel>
         <div role="group" aria-labelledby="cat-color-label" className="flex items-center gap-2.5 flex-wrap">
@@ -167,7 +164,6 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({ initialData, onSubmi
         {errors.color && <p className="text-xs font-medium text-red-500 mt-1">{errors.color.message}</p>}
       </div>
 
-      {/* Actions */}
       <div className="grid grid-cols-[auto_1fr] gap-3 pt-2">
         <Button type="button" variant="outline" onClick={onCancel} disabled={submitting}>
           Cancel

@@ -264,7 +264,6 @@ export default function ProfilePage() {
     <div className="max-w-3xl mx-auto space-y-6 sm:space-y-8">
       <PageHeader title="Profile" subtitle="Manage your account, money settings and preferences." />
 
-      {/* Profile card */}
       <Card lift={false} padding="none" className="overflow-hidden">
         <div className="h-20 sm:h-24 bg-gradient-to-r from-[#064e3b] via-[#047857] to-[#10b981]" aria-hidden="true" />
         <div className="px-5 sm:px-6 pb-5 sm:pb-6">
@@ -412,7 +411,6 @@ export default function ProfilePage() {
         />
       </Section>
 
-      {/* Edit profile */}
       <Sheet isOpen={editOpen} onClose={() => setEditOpen(false)} title="Edit profile" description="Update your personal details and money settings">
         {editOpen && (
           <EditProfileForm
@@ -427,7 +425,6 @@ export default function ProfilePage() {
         )}
       </Sheet>
 
-      {/* Monthly budget */}
       <Sheet
         isOpen={budgetOpen}
         onClose={() => setBudgetOpen(false)}

@@ -106,7 +106,6 @@ export default function GoalDetailPage() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="flex items-center justify-between gap-3">
         <Link
           href="/budget"
@@ -131,7 +130,6 @@ export default function GoalDetailPage() {
         </div>
       </div>
 
-      {/* Hero */}
       <section
         className={`rounded-2xl border shadow-card p-5 sm:p-8 ${
           isCompleted
@@ -166,7 +164,6 @@ export default function GoalDetailPage() {
               </div>
             </div>
 
-            {/* Amounts */}
             <div className="grid grid-cols-3 gap-2 sm:gap-3">
               <Stat label="Saved" value={formatCurrency(goal.saved, currency)} tone="emerald" />
               <Stat label="Target" value={formatCurrency(goal.target, currency)} />
@@ -177,7 +174,6 @@ export default function GoalDetailPage() {
               />
             </div>
 
-            {/* Milestones */}
             <div>
               <div className="relative h-2.5 rounded-full bg-emerald-100/70">
                 <div
@@ -212,7 +208,6 @@ export default function GoalDetailPage() {
             </div>
           </div>
 
-          {/* Ring */}
           <div
             className="relative w-40 h-40 sm:w-44 sm:h-44 mx-auto md:mx-0 flex-shrink-0"
             role="img"
@@ -262,7 +257,6 @@ export default function GoalDetailPage() {
           </div>
         )}
 
-        {/* Actions */}
         <div className="mt-6 grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-3">
           <Button variant="primary" icon={<Plus className="w-4 h-4" />} onClick={() => setFundsMode('deposit')}>
             Add funds
@@ -282,7 +276,6 @@ export default function GoalDetailPage() {
         </div>
       </section>
 
-      {/* Activity */}
       <section className="bg-white rounded-2xl border border-slate-100 shadow-card p-5 sm:p-6">
         <div className="flex flex-wrap items-end justify-between gap-2 mb-4">
           <div>
@@ -356,7 +349,6 @@ export default function GoalDetailPage() {
         )}
       </section>
 
-      {/* Deposit / withdraw */}
       <Sheet
         isOpen={fundsMode !== null}
         onClose={() => setFundsMode(null)}
@@ -378,7 +370,6 @@ export default function GoalDetailPage() {
         )}
       </Sheet>
 
-      {/* Edit */}
       <Sheet isOpen={editOpen} onClose={() => setEditOpen(false)} title="Edit goal" description={goal.name}>
         {editOpen && (
           <GoalForm

@@ -209,7 +209,6 @@ export default function ReportsPage() {
         }
       />
 
-      {/* Period selector */}
       <div
         role="radiogroup"
         aria-label="Report month"
@@ -236,7 +235,6 @@ export default function ReportsPage() {
         })}
       </div>
 
-      {/* KPIs */}
       <section aria-label={`Summary for ${format(selectedMonth, 'MMMM yyyy')}`} className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <StatCard
           title="Income"
@@ -435,7 +433,6 @@ export default function ReportsPage() {
         </>
       )}
 
-      {/* 6-month trend */}
       <Card lift={false} className="min-w-0">
         <SectionHeader title="6-month trend" subtitle="Income vs spending month over month" className="mb-4" />
         {loading ? <Skeleton className="h-64 sm:h-72 w-full" /> : <SpendingOverviewChart data={trend} currency={currency} />}

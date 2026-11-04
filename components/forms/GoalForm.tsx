@@ -107,7 +107,6 @@ export const GoalForm: React.FC<GoalFormProps> = ({ onSubmit, onCancel, initialD
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-5">
-      {/* Hero: emoji + target amount */}
       <div className="rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white p-4">
         <div className="flex items-center gap-3">
           <span className="w-14 h-14 flex-shrink-0 rounded-2xl bg-white border border-emerald-100 shadow-xs flex items-center justify-center text-3xl">
@@ -135,7 +134,6 @@ export const GoalForm: React.FC<GoalFormProps> = ({ onSubmit, onCancel, initialD
         </div>
         {errors.target && <p className="text-xs font-medium text-red-500 mt-2">{errors.target.message}</p>}
 
-        {/* Emoji quick-picks */}
         <div className="mt-4 flex gap-1.5 overflow-x-auto no-scrollbar -mx-1 px-1 pb-0.5" role="group" aria-label="Goal emoji">
           {EMOJI_CHOICES.map((e) => (
             <button
@@ -156,7 +154,6 @@ export const GoalForm: React.FC<GoalFormProps> = ({ onSubmit, onCancel, initialD
         </div>
       </div>
 
-      {/* Name */}
       <Input
         label="Goal name"
         placeholder="e.g. Europe trip, New laptop, Down payment"
@@ -164,7 +161,6 @@ export const GoalForm: React.FC<GoalFormProps> = ({ onSubmit, onCancel, initialD
         error={errors.name?.message}
       />
 
-      {/* Category */}
       <div className="space-y-2">
         <SectionLabel>Category</SectionLabel>
         <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
@@ -197,7 +193,6 @@ export const GoalForm: React.FC<GoalFormProps> = ({ onSubmit, onCancel, initialD
         </div>
       </div>
 
-      {/* Starting amount (create only) */}
       {!isEdit && (
         <Input
           label="Already saved (optional)"
@@ -213,7 +208,6 @@ export const GoalForm: React.FC<GoalFormProps> = ({ onSubmit, onCancel, initialD
         />
       )}
 
-      {/* Actions */}
       <div className="sticky -bottom-5 -mx-6 px-6 py-4 bg-white/95 backdrop-blur border-t border-emerald-100/80 grid grid-cols-[auto_1fr] gap-3">
         <Button type="button" variant="outline" onClick={onCancel} disabled={submitting}>
           Cancel

@@ -98,7 +98,6 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-[#d1fae5] via-[#f0fdf4] to-[#ecfdf5]">
       <div className="w-full max-w-md bg-white rounded-[28px] shadow-2xl border border-emerald-100 p-6 sm:p-8">
-        {/* Brand Header */}
         <div className="flex flex-col items-center text-center mb-6">
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#047857] to-[#10b981] flex items-center justify-center text-white shadow-emerald-lg mb-3">
             <Wallet className="w-7 h-7" />
@@ -109,7 +108,6 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Guest Demo Mode Instant Access Banner */}
         <div className="mb-6 p-3.5 bg-[#ecfdf5] border border-[#a7f3d0] rounded-2xl flex items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
             <Sparkles className="w-4 h-4 text-emerald-600 flex-shrink-0" />
@@ -134,7 +132,6 @@ export default function LoginPage() {
           </div>
         )}
 
-        {/* Login Form: Email & Password */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <Input
             type="email"
@@ -178,14 +175,12 @@ export default function LoginPage() {
             Sign In with Email
           </Button>
 
-          {/* OR Divider */}
           <div className="flex items-center gap-3 py-1" role="separator" aria-label="or">
             <div className="h-px flex-1 bg-emerald-100" />
             <span className="text-[11px] font-bold uppercase tracking-wider text-[#94a3b8]">or</span>
             <div className="h-px flex-1 bg-emerald-100" />
           </div>
 
-          {/* Continue with Google */}
           <Button
             type="button"
             variant="outline"

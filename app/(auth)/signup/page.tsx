@@ -106,7 +106,6 @@ export default function SignupPage() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 py-8 bg-gradient-to-br from-[#d1fae5] via-[#f0fdf4] to-[#ecfdf5]">
       <div className="w-full max-w-lg bg-white rounded-[28px] shadow-2xl border border-emerald-100 p-6 sm:p-8 my-auto">
-        {/* Brand Header */}
         <div className="flex flex-col items-center text-center mb-6">
           <div className="w-13 h-13 rounded-2xl bg-gradient-to-tr from-[#047857] to-[#10b981] flex items-center justify-center text-white shadow-emerald-lg mb-2.5">
             <Wallet className="w-6 h-6" />
@@ -117,7 +116,6 @@ export default function SignupPage() {
           </p>
         </div>
 
-        {/* Live Initials Avatar Preview */}
         <div className="mb-6 p-4 bg-[#f0fdf4] border border-[#a7f3d0] rounded-2xl flex items-center gap-4">
           <Avatar
             name={enteredName || 'New User'}
@@ -137,9 +135,7 @@ export default function SignupPage() {
           </div>
         </div>
 
-        {/* Registration Form with All Necessary Details */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-3.5">
-          {/* Full Name */}
           <Input
             label="Full Name"
             placeholder="e.g. Johnathan Vance"
@@ -147,7 +143,6 @@ export default function SignupPage() {
             error={errors.name?.message}
           />
 
-          {/* Email Address */}
           <Input
             type="email"
             label="Email Address"
@@ -156,7 +151,6 @@ export default function SignupPage() {
             error={errors.email?.message}
           />
 
-          {/* Phone Number */}
           <Input
             type="tel"
             label="Phone Number"
@@ -165,7 +159,6 @@ export default function SignupPage() {
             error={errors.phone?.message}
           />
 
-          {/* Currency and Monthly Budget grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-emerald-950 mb-1.5">
@@ -178,7 +171,7 @@ export default function SignupPage() {
               >
                 {SUPPORTED_CURRENCIES.map((c) => (
                   <option key={c.code} value={c.code}>
-                    {c.flag} {c.code} ({c.symbol.trim()}) — {c.name}
+                    {c.flag} {c.code} ({c.symbol.trim()}), {c.name}
                   </option>
                 ))}
               </select>
@@ -202,7 +195,6 @@ export default function SignupPage() {
             </div>
           </div>
 
-          {/* Password & Confirm Password */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Input
               type="password"
@@ -233,14 +225,12 @@ export default function SignupPage() {
             Create My Account
           </Button>
 
-          {/* OR Divider */}
           <div className="flex items-center gap-3 py-1" role="separator" aria-label="or">
             <div className="h-px flex-1 bg-emerald-100" />
             <span className="text-[11px] font-bold uppercase tracking-wider text-[#94a3b8]">or</span>
             <div className="h-px flex-1 bg-emerald-100" />
           </div>
 
-          {/* Continue with Google */}
           <Button
             type="button"
             variant="outline"

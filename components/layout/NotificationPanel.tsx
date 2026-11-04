@@ -50,7 +50,6 @@ export const NotificationPanel: React.FC<NotificationPanelProps> = ({ isOpen, on
             transition={{ type: 'spring', damping: 28, stiffness: 300 }}
             className="relative w-full md:w-[400px] bg-white rounded-t-[28px] md:rounded-3xl shadow-2xl border border-emerald-100 flex flex-col max-h-[85vh] z-10 overflow-hidden md:mt-12"
           >
-            {/* Header */}
             <div className="flex items-center justify-between gap-3 px-5 py-4 border-b border-slate-100">
               <div className="flex items-center gap-3 min-w-0">
                 <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
@@ -101,7 +100,6 @@ export const NotificationPanel: React.FC<NotificationPanelProps> = ({ isOpen, on
               </div>
             </div>
 
-            {/* List */}
             <div className="overflow-y-auto overscroll-contain p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
               {notifications.length === 0 ? (
                 <div className="text-center py-12 px-6">

@@ -150,7 +150,6 @@ export default function GroupDetailPage() {
     );
   }
 
-  // ---- Derived data ----
   const memberBalances = computeGroupBalances(group.members, expenses, settlements);
   const debts = simplifyDebts(memberBalances);
   const memberMap = new Map(group.members.map((m) => [m.id, m]));
@@ -165,7 +164,6 @@ export default function GroupDetailPage() {
     return m.id === me?.id ? 'You' : displayName(m.name);
   };
 
-  // ---- Actions ----
   const openAddExpense = () => setExpenseSheet({ open: true, editing: null });
   const openSettle = (initial: DebtSimplification | null = null) =>
     setSettleSheet({ open: true, initial });
@@ -231,7 +229,6 @@ export default function GroupDetailPage() {
         All groups
       </Link>
 
-      {/* ---- Header ---- */}
       <section className={`${cardClass} p-4 sm:p-5`}>
         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
           <div className="flex items-center gap-3.5 min-w-0 flex-1">
@@ -292,7 +289,6 @@ export default function GroupDetailPage() {
           </div>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-3 gap-2 sm:gap-3 mt-4">
           <div className="rounded-xl bg-slate-50 border border-slate-100 p-3 min-w-0">
             <p className="text-[10px] sm:text-[11px] font-medium uppercase tracking-wider text-[#64748b]">
@@ -333,7 +329,6 @@ export default function GroupDetailPage() {
         </div>
       </section>
 
-      {/* ---- Tabs ---- */}
       <div
         role="tablist"
         aria-label="Group sections"
@@ -360,7 +355,6 @@ export default function GroupDetailPage() {
       </div>
 
       <div role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`}>
-        {/* ---- Balances ---- */}
         {tab === 'balances' && (
           <div className="grid lg:grid-cols-2 gap-4 items-start">
             <section className={cardClass}>
@@ -371,7 +365,7 @@ export default function GroupDetailPage() {
               {debts.length === 0 ? (
                 <EmptyState
                   icon={<PartyPopper className="w-6 h-6" />}
-                  title={expenses.length ? 'Everyone is settled up.' : 'No debts yet — add an expense to get started.'}
+                  title={expenses.length ? 'Everyone is settled up.' : 'No debts yet. Add an expense to get started.'}
                   action={
                     expenses.length ? undefined : (
                       <Button variant="secondary" size="sm" icon={<Plus className="w-3.5 h-3.5" />} onClick={openAddExpense}>
@@ -460,7 +454,6 @@ export default function GroupDetailPage() {
           </div>
         )}
 
-        {/* ---- Expenses ---- */}
         {tab === 'expenses' && (
           <section className={cardClass}>
             <header className="flex items-center justify-between gap-3 px-4 sm:px-5 pt-4 pb-3">
@@ -543,7 +536,6 @@ export default function GroupDetailPage() {
           </section>
         )}
 
-        {/* ---- Settlements ---- */}
         {tab === 'settlements' && (
           <section className={cardClass}>
             <header className="px-4 sm:px-5 pt-4 pb-3">
@@ -594,7 +586,6 @@ export default function GroupDetailPage() {
           </section>
         )}
 
-        {/* ---- Activity ---- */}
         {tab === 'activity' && (
           <section className={`${cardClass} p-4 sm:p-5`}>
             <h2 className="text-base font-bold text-[#0b3b2e] mb-4">Activity</h2>
@@ -603,7 +594,6 @@ export default function GroupDetailPage() {
         )}
       </div>
 
-      {/* ---- Sheets ---- */}
       <Sheet
         isOpen={expenseSheet.open}
         onClose={() => setExpenseSheet({ open: false, editing: null })}

@@ -33,7 +33,6 @@ export const Header: React.FC<HeaderProps> = ({ currentMonth, showMonthSelector 
     <>
       <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-b border-emerald-100/70">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 h-16">
-          {/* Left: brand on mobile, section on desktop */}
           <div className="flex items-center gap-3 min-w-0">
             <Link
               href="/dashboard"
@@ -60,7 +59,6 @@ export const Header: React.FC<HeaderProps> = ({ currentMonth, showMonthSelector 
             )}
           </div>
 
-          {/* Right tools */}
           <div className="flex items-center gap-2">
             {showMonthSelector && (
               <span className="hidden lg:inline-flex items-center h-9 px-3 rounded-xl bg-slate-50 border border-slate-200/80 text-xs font-medium text-[#0b3b2e]">

@@ -34,10 +34,6 @@ function isThisMonthExpense(t: Transaction, now: Date) {
   return d ? isSameMonth(d, now) : false;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                   Page                                     */
-/* -------------------------------------------------------------------------- */
-
 export default function BudgetAndGoalsPage() {
   const { userProfile, updateProfileData } = useAuth();
   const { transactions, categories, loading: txLoading } = useTransactions();
@@ -78,7 +74,6 @@ export default function BudgetAndGoalsPage() {
 
   return (
     <div className="space-y-6 sm:space-y-8">
-      {/* Page header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div className="min-w-0">
           <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0b3b2e]">Budget &amp; Goals</h1>
@@ -98,7 +93,6 @@ export default function BudgetAndGoalsPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6">
-        {/* Monthly budget */}
         <section className="lg:col-span-3 bg-white rounded-2xl border border-slate-100 shadow-card p-5 sm:p-6">
           <div className="flex items-start justify-between gap-3 mb-5">
             <div>
@@ -143,7 +137,6 @@ export default function BudgetAndGoalsPage() {
           )}
         </section>
 
-        {/* Category breakdown */}
         <section className="lg:col-span-2 bg-white rounded-2xl border border-slate-100 shadow-card p-5 sm:p-6">
           <div className="flex items-start justify-between gap-3 mb-4">
             <div>
@@ -212,7 +205,6 @@ export default function BudgetAndGoalsPage() {
 
       <GoalsSection currency={currency} createOpen={createGoalOpen} setCreateOpen={setCreateGoalOpen} />
 
-      {/* Edit monthly budget */}
       <Sheet
         isOpen={budgetSheetOpen}
         onClose={() => setBudgetSheetOpen(false)}
@@ -236,10 +228,6 @@ export default function BudgetAndGoalsPage() {
     </div>
   );
 }
-
-/* -------------------------------------------------------------------------- */
-/*                                Goals section                               */
-/* -------------------------------------------------------------------------- */
 
 function GoalsSection({
   currency,
@@ -350,7 +338,6 @@ function GoalsSection({
         </div>
       )}
 
-      {/* Create goal */}
       <Sheet
         isOpen={createOpen}
         onClose={() => setCreateOpen(false)}
@@ -370,7 +357,6 @@ function GoalsSection({
         )}
       </Sheet>
 
-      {/* Edit goal */}
       <Sheet
         isOpen={Boolean(editingGoal)}
         onClose={() => setEditingGoal(null)}
@@ -391,7 +377,6 @@ function GoalsSection({
         )}
       </Sheet>
 
-      {/* Deposit / withdraw */}
       <Sheet
         isOpen={Boolean(fundsGoal)}
         onClose={() => setFundsGoal(null)}
@@ -414,10 +399,6 @@ function GoalsSection({
     </section>
   );
 }
-
-/* -------------------------------------------------------------------------- */
-/*                                  Helpers                                   */
-/* -------------------------------------------------------------------------- */
 
 function BudgetForm({
   initial,

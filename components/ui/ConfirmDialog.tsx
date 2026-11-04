@@ -54,7 +54,6 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center p-4">
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -64,7 +63,6 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
             className="fixed inset-0 bg-emerald-950/40 backdrop-blur-sm"
           />
 
-          {/* Dialog */}
           <motion.div
             role="alertdialog"
             aria-modal="true"

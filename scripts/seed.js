@@ -1,12 +1,5 @@
-/**
- * ExpenseFlow Firebase Seeding Utility
- * 
- * Usage:
- *   node scripts/seed.js <YOUR_USER_UID>
- * 
- * Note: When running the app, default categories are automatically seeded
- * upon first user registration or login via `lib/seed-data.ts`.
- */
+// Seeds Firestore for one user. Usage: node scripts/seed.js <USER_UID>
+// (Default categories are also seeded on first login via lib/seed-data.ts.)
 
 const { initializeApp } = require('firebase/app');
 const { getFirestore, doc, setDoc, writeBatch, collection } = require('firebase/firestore');

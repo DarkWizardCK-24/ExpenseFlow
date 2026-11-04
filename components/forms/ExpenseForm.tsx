@@ -113,7 +113,6 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-5">
-      {/* Amount hero card — tinted by transaction type */}
       <div
         className={`rounded-2xl border p-4 transition-colors duration-300 ${
           isExpense
@@ -121,7 +120,6 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
             : 'bg-gradient-to-br from-emerald-50 to-white border-emerald-100'
         }`}
       >
-        {/* Type Toggle */}
         <div className="grid grid-cols-2 gap-1 bg-white/80 p-1 rounded-xl border border-slate-100 shadow-xs">
           {(
             [
@@ -144,7 +142,6 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
           ))}
         </div>
 
-        {/* Amount */}
         <div className="mt-4 text-center">
           <span className="text-[11px] font-medium uppercase tracking-wider text-[#64748b]">
             {isExpense ? 'How much did you spend?' : 'How much did you receive?'}
@@ -173,7 +170,6 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
         </div>
       </div>
 
-      {/* Title */}
       <Input
         label={isExpense ? 'Title / Merchant' : 'Title / Source'}
         placeholder={isExpense ? 'e.g. Grocery store, Netflix, Uber' : 'e.g. Salary, Freelance, Refund'}
@@ -181,7 +177,6 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
         error={errors.title?.message}
       />
 
-      {/* Category */}
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <SectionLabel>Category</SectionLabel>
@@ -232,7 +227,6 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
         )}
       </div>
 
-      {/* Date with quick picks */}
       <div className="space-y-2">
         <SectionLabel>Date</SectionLabel>
         <div className="flex items-center gap-2">
@@ -266,7 +260,6 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
         {errors.date && <p className="text-xs font-medium text-red-500">{errors.date.message}</p>}
       </div>
 
-      {/* Payment Method */}
       <div className="space-y-2">
         <SectionLabel>Payment Method</SectionLabel>
         <div className="grid grid-cols-4 gap-2">
@@ -292,14 +285,12 @@ export const ExpenseForm: React.FC<ExpenseFormProps> = ({
         </div>
       </div>
 
-      {/* Optional Note */}
       <Input
         label="Note (Optional)"
         placeholder="Add details, tags, receipt info..."
         {...register('note')}
       />
 
-      {/* Actions — pinned to the bottom of the sheet while scrolling */}
       <div className="sticky -bottom-5 -mx-6 px-6 py-4 bg-white/95 backdrop-blur border-t border-emerald-100/80 grid grid-cols-[auto_1fr] gap-3">
         <Button type="button" variant="outline" onClick={onCancel} disabled={submitting}>
           Cancel

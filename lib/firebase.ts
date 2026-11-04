@@ -33,7 +33,6 @@ googleProvider.setCustomParameters({ prompt: 'select_account' });
 export const db: Firestore = getFirestore(app);
 export const storage: FirebaseStorage = getStorage(app);
 
-// Client-side Analytics
 let analytics: Analytics | null = null;
 if (typeof window !== 'undefined') {
   isSupported().then((supported) => {

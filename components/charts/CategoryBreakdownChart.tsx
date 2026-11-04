@@ -53,7 +53,6 @@ export const CategoryBreakdownChart: React.FC<CategoryBreakdownChartProps> = ({
 
   return (
     <div className={`flex flex-col items-center gap-5 ${stacked ? '' : 'md:flex-row md:gap-6'}`}>
-      {/* Donut */}
       <div
         className="w-44 h-44 sm:w-48 sm:h-48 relative flex-shrink-0"
         role="img"
@@ -106,7 +105,6 @@ export const CategoryBreakdownChart: React.FC<CategoryBreakdownChartProps> = ({
         </div>
       </div>
 
-      {/* Legend */}
       <ul className="flex-1 w-full min-w-0 space-y-3">
         {items.map((item) => {
           const pct = (item.value / total) * 100;

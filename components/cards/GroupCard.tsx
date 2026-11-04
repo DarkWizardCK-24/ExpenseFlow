@@ -96,7 +96,6 @@ export const GroupCard: React.FC<GroupCardProps> = ({
   return (
     <>
       <article className="group/card bg-white rounded-2xl border border-slate-200/70 shadow-card hover:shadow-card-hover hover:border-emerald-200 transition-all duration-200 flex flex-col">
-        {/* Header: emoji, name, meta — whole area links to detail */}
         <Link
           href={`/split/${group.id}`}
           className="flex items-center gap-3 p-4 pb-3 rounded-t-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
@@ -119,7 +118,6 @@ export const GroupCard: React.FC<GroupCardProps> = ({
           <ChevronRight className="w-4 h-4 text-slate-300 group-hover/card:text-emerald-600 transition-colors flex-shrink-0" />
         </Link>
 
-        {/* Balance + avatars */}
         <div className="mx-4 rounded-xl bg-slate-50/80 border border-slate-100 px-3.5 py-3 flex items-center justify-between gap-3">
           <div className="min-w-0">
             <p className="text-[11px] font-medium uppercase tracking-wider text-[#64748b]">
@@ -162,7 +160,6 @@ export const GroupCard: React.FC<GroupCardProps> = ({
           </div>
         </div>
 
-        {/* Actions */}
         <div className="p-4 pt-3 mt-auto flex items-center gap-2">
           <Button
             variant="secondary"

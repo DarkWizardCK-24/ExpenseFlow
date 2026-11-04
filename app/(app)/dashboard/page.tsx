@@ -64,10 +64,6 @@ const SeeAllLink: React.FC<{ href: string; label: string }> = ({ href, label }) 
   </Link>
 );
 
-/* ------------------------------------------------------------------ */
-/* Group preview: loads the group's ledger so balances, add-expense and */
-/* settle-up all work directly from the dashboard.                      */
-/* ------------------------------------------------------------------ */
 const GroupPreview: React.FC<{
   group: SplitGroup;
   currentUserId?: string;
@@ -263,7 +259,6 @@ export default function DashboardPage() {
         }
       />
 
-      {/* Balance hero */}
       <section
         aria-label="Balance overview"
         className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#064e3b] via-[#047857] to-[#10b981] text-white shadow-emerald-lg"
@@ -299,7 +294,6 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* Monthly budget */}
           <div className="rounded-2xl bg-white/10 border border-white/15 p-4 sm:p-5 backdrop-blur-sm">
             <div className="flex items-center justify-between gap-2">
               <p className="text-sm font-medium">{format(new Date(), 'MMMM')} budget</p>
@@ -344,7 +338,6 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* Stat cards */}
       <section aria-label="This month" className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
         <StatCard
           title="Income"
@@ -378,7 +371,6 @@ export default function DashboardPage() {
         />
       </section>
 
-      {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6">
         <Card lift={false} className="lg:col-span-3 min-w-0">
           <SectionHeader
@@ -410,7 +402,6 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      {/* Recent transactions + goals/groups */}
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6">
         <section aria-labelledby="recent-tx" className="lg:col-span-3 min-w-0 space-y-3">
           <div className="flex items-center justify-between gap-3">
@@ -459,7 +450,6 @@ export default function DashboardPage() {
         </section>
 
         <div className="lg:col-span-2 min-w-0 space-y-6">
-          {/* Goal preview */}
           <section aria-labelledby="goal-preview" className="space-y-3">
             <div className="flex items-center justify-between gap-3">
               <h2 id="goal-preview" className="text-sm sm:text-base font-semibold text-[#0b3b2e]">
@@ -494,7 +484,6 @@ export default function DashboardPage() {
             )}
           </section>
 
-          {/* Group preview */}
           <section aria-labelledby="group-preview" className="space-y-3">
             <div className="flex items-center justify-between gap-3">
               <h2 id="group-preview" className="text-sm sm:text-base font-semibold text-[#0b3b2e]">
@@ -533,7 +522,6 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Edit transaction */}
       <Sheet
         isOpen={Boolean(editingTx)}
         onClose={() => setEditingTx(null)}
@@ -555,7 +543,6 @@ export default function DashboardPage() {
         )}
       </Sheet>
 
-      {/* Add funds to goal */}
       <Sheet
         isOpen={Boolean(goalForFunds)}
         onClose={() => setGoalForFunds(null)}

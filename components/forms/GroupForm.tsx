@@ -18,7 +18,7 @@ const groupSchema = z.object({
 
 type GroupFormData = z.infer<typeof groupSchema>;
 
-/** Payload handed back in edit mode — ready for `useGroupDetail().updateGroup`. */
+/** Payload handed back in edit mode - ready for `useGroupDetail().updateGroup`. */
 export interface GroupFormUpdate {
   name: string;
   category: SplitGroupCategory;
@@ -191,7 +191,6 @@ export const GroupForm: React.FC<GroupFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-5">
-      {/* Identity hero: emoji preview + name */}
       <div className="rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white p-4">
         <div className="flex items-start gap-3">
           <span
@@ -235,7 +234,6 @@ export const GroupForm: React.FC<GroupFormProps> = ({
         </div>
       </div>
 
-      {/* Category tiles */}
       <div className="space-y-2">
         <SectionLabel>Group type</SectionLabel>
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
@@ -266,7 +264,6 @@ export const GroupForm: React.FC<GroupFormProps> = ({
         </div>
       </div>
 
-      {/* Members */}
       <div className="space-y-2">
         <SectionLabel hint={isEdit ? `${members.length} total` : 'You’re included automatically'}>
           Members
@@ -324,7 +321,7 @@ export const GroupForm: React.FC<GroupFormProps> = ({
                 ) : (
                   <span
                     className="w-8 h-8 flex items-center justify-center text-slate-300 flex-shrink-0"
-                    title="Has expenses or settlements — can’t be removed"
+                    title="Has expenses or settlements, can’t be removed"
                     aria-label="Can't remove: member has expenses or settlements"
                   >
                     <Lock className="w-3.5 h-3.5" />
@@ -335,7 +332,6 @@ export const GroupForm: React.FC<GroupFormProps> = ({
           })}
         </ul>
 
-        {/* Add member */}
         <div className="flex gap-2 pt-1">
           <div className="flex-1 min-w-0">
             <Input
@@ -373,7 +369,6 @@ export const GroupForm: React.FC<GroupFormProps> = ({
         )}
       </div>
 
-      {/* Actions */}
       <div className="sticky -bottom-5 -mx-6 px-6 py-4 bg-white/95 backdrop-blur border-t border-emerald-100/80 grid grid-cols-[auto_1fr] gap-3">
         <Button type="button" variant="outline" onClick={onCancel} disabled={submitting}>
           Cancel

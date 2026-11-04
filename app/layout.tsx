@@ -12,7 +12,7 @@ const fontSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'ExpenseFlow – Track spending, split bills, reach goals',
+  title: 'ExpenseFlow: Track spending, split bills, reach goals',
   description: 'Track income and expenses, split bills with friends and save towards goals, all in one place.',
   manifest: '/manifest.json',
 };

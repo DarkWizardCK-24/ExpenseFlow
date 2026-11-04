@@ -82,7 +82,6 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
 
   return (
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
-      {/* Calendar card */}
       <div className="bg-white rounded-2xl shadow-card border border-slate-100 p-3 sm:p-5">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div className="flex items-center gap-2">
@@ -173,7 +172,6 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
         </div>
       </div>
 
-      {/* Selected day */}
       <div className="bg-white rounded-2xl shadow-card border border-slate-100 p-4 sm:p-5 space-y-3">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">

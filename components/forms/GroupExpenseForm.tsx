@@ -191,7 +191,6 @@ export const GroupExpenseForm: React.FC<GroupExpenseFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-5">
-      {/* Amount hero */}
       <div className="rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white p-4 text-center">
         <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748b]">
           Total bill
@@ -228,7 +227,6 @@ export const GroupExpenseForm: React.FC<GroupExpenseFormProps> = ({
         error={errors.title?.message}
       />
 
-      {/* Category */}
       {categories.length > 0 && (
         <div className="space-y-2">
           <span className="block text-xs font-semibold uppercase tracking-wider text-emerald-900">
@@ -263,7 +261,6 @@ export const GroupExpenseForm: React.FC<GroupExpenseFormProps> = ({
         </div>
       )}
 
-      {/* Paid by */}
       <div className="space-y-2">
         <span className="block text-xs font-semibold uppercase tracking-wider text-emerald-900">
           Paid by
@@ -296,7 +293,6 @@ export const GroupExpenseForm: React.FC<GroupExpenseFormProps> = ({
         </div>
       </div>
 
-      {/* Split method */}
       <div className="space-y-2">
         <span className="block text-xs font-semibold uppercase tracking-wider text-emerald-900">
           Split
@@ -323,7 +319,6 @@ export const GroupExpenseForm: React.FC<GroupExpenseFormProps> = ({
         </p>
       </div>
 
-      {/* Allocation */}
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <span className="block text-xs font-semibold uppercase tracking-wider text-emerald-900">
@@ -422,7 +417,6 @@ export const GroupExpenseForm: React.FC<GroupExpenseFormProps> = ({
         {splitError && <p className="text-xs font-medium text-red-500">{splitError}</p>}
       </div>
 
-      {/* Actions */}
       <div className="sticky -bottom-5 -mx-6 px-6 py-4 bg-white/95 backdrop-blur border-t border-emerald-100/80 grid grid-cols-[auto_1fr] gap-3">
         <Button type="button" variant="outline" onClick={onCancel} disabled={submitting}>
           Cancel

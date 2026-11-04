@@ -108,7 +108,6 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-5">
-      {/* Hero card — tinted by mode */}
       <div
         className={`rounded-2xl border p-4 transition-colors duration-300 ${
           isWithdraw
@@ -128,7 +127,6 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
           </div>
         </div>
 
-        {/* Mode toggle */}
         <div className="grid grid-cols-2 gap-1 bg-white/80 p-1 rounded-xl border border-slate-100 shadow-xs">
           <button
             type="button"
@@ -156,7 +154,6 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
           </button>
         </div>
 
-        {/* Amount */}
         <div className="mt-4 text-center">
           <span className="text-[11px] font-medium uppercase tracking-wider text-[#64748b]">
             {isWithdraw ? 'How much are you taking out?' : 'How much are you adding?'}
@@ -192,7 +189,6 @@ export const AddFundsForm: React.FC<AddFundsFormProps> = ({
           ) : null}
         </div>
 
-        {/* Quick picks */}
         <div className="mt-3 flex flex-wrap justify-center gap-1.5">
           {quickPicks.map((p) => (
             <button

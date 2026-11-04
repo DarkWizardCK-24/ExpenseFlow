@@ -65,7 +65,6 @@ export const GoalCard: React.FC<GoalCardProps> = ({
   return (
     <>
       <div className="relative overflow-hidden rounded-2xl select-none group">
-        {/* Swipe-to-delete zone */}
         <div className="absolute inset-y-0 right-0 w-28 bg-red-500 rounded-r-2xl flex items-center justify-end pr-6 text-white z-0">
           <Trash2 className="w-5 h-5" />
         </div>
@@ -75,7 +74,6 @@ export const GoalCard: React.FC<GoalCardProps> = ({
           className="relative z-10 bg-white rounded-2xl shadow-card border border-slate-100 p-4 sm:p-5 hover:shadow-card-hover transition-shadow"
           style={dragProps.style}
         >
-          {/* Header */}
           <div className="flex items-start gap-3">
             <span
               className={`w-12 h-12 flex-shrink-0 rounded-2xl border flex items-center justify-center text-2xl ${
@@ -112,7 +110,6 @@ export const GoalCard: React.FC<GoalCardProps> = ({
             </span>
           </div>
 
-          {/* Progress */}
           <div className="mt-4">
             <Progress value={percentage} max={100} variant="emerald" height="md" />
             <div className="mt-2 flex items-baseline justify-between gap-2 text-xs tabular-nums">
@@ -126,7 +123,6 @@ export const GoalCard: React.FC<GoalCardProps> = ({
             </div>
           </div>
 
-          {/* Actions */}
           <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
             <button
               type="button"

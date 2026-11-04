@@ -37,7 +37,6 @@ export function useSwipeToDelete({ onDelete, threshold = 90 }: SwipeToDeleteOpti
     if (!isSwiping) return;
     setIsSwiping(false);
     if (offsetX < -threshold) {
-      // Trigger delete confirmation
       onDelete();
     }
     setOffsetX(0);

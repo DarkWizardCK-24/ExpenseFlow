@@ -96,7 +96,6 @@ export const SettleUpForm: React.FC<SettleUpFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-5">
-      {/* Hero: from → to + amount */}
       <div className="rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white p-4">
         <div className="flex items-center justify-center gap-3">
           <div className="flex flex-col items-center gap-1 min-w-0 w-24">
@@ -128,7 +127,6 @@ export const SettleUpForm: React.FC<SettleUpFormProps> = ({
         )}
       </div>
 
-      {/* Suggestions */}
       {suggestions.length > 0 && (
         <div className="space-y-2">
           <span className="flex items-center gap-1.5 text-xs font-medium text-emerald-950">
@@ -164,7 +162,6 @@ export const SettleUpForm: React.FC<SettleUpFormProps> = ({
         </div>
       )}
 
-      {/* Manual pickers */}
       <div className="space-y-2">
         <span className="block text-xs font-semibold uppercase tracking-wider text-emerald-900">
           Or record a custom payment
@@ -202,7 +199,6 @@ export const SettleUpForm: React.FC<SettleUpFormProps> = ({
         {errors.to && <p className="text-xs font-medium text-red-500">{errors.to.message}</p>}
       </div>
 
-      {/* Actions */}
       <div className="sticky -bottom-5 -mx-6 px-6 py-4 bg-white/95 backdrop-blur border-t border-emerald-100/80 grid grid-cols-[auto_1fr] gap-3">
         <Button type="button" variant="outline" onClick={onCancel} disabled={submitting}>
           Cancel

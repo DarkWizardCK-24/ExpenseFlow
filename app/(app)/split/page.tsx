@@ -137,7 +137,6 @@ export default function SplitBillsPage() {
 
   return (
     <div className="space-y-6">
-      {/* Page header */}
       <div className="flex items-start sm:items-center justify-between gap-4">
         <div className="min-w-0">
           <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0b3b2e]">Split bills</h1>
@@ -158,7 +157,6 @@ export default function SplitBillsPage() {
         </Button>
       </div>
 
-      {/* Overall summary */}
       {(loading || groups.length > 0) && (
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <SummaryTile
@@ -189,7 +187,6 @@ export default function SplitBillsPage() {
         </div>
       )}
 
-      {/* Groups */}
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {[0, 1, 2].map((i) => (
@@ -216,7 +213,7 @@ export default function SplitBillsPage() {
           </div>
           <h2 className="mt-4 font-bold text-base text-[#0b3b2e]">No groups yet</h2>
           <p className="text-sm text-[#64748b] mt-1 mb-5">
-            Create a group for a trip, your flat or a dinner — we’ll work out who owes whom.
+            Create a group for a trip, your flat or a dinner. We’ll work out who owes whom.
           </p>
           <Button variant="primary" icon={<Plus className="w-4 h-4" />} onClick={() => setCreateOpen(true)}>
             Create your first group
@@ -239,7 +236,6 @@ export default function SplitBillsPage() {
         </div>
       )}
 
-      {/* Create group */}
       <Sheet
         isOpen={createOpen}
         onClose={() => setCreateOpen(false)}
@@ -255,7 +251,6 @@ export default function SplitBillsPage() {
         />
       </Sheet>
 
-      {/* Quick add expense / settle up from a card */}
       <Sheet
         isOpen={Boolean(quickAction)}
         onClose={() => setQuickAction(null)}

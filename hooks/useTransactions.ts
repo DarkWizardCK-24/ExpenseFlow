@@ -96,7 +96,6 @@ export function useTransactions() {
   // False while Firestore has no category docs and we're showing in-memory defaults
   const [categoriesPersisted, setCategoriesPersisted] = useState(true);
 
-  // Load Categories & Transactions
   useEffect(() => {
     if (isDemoMode || !isFirebaseConfigured || !user) {
       // Demo mode fallback
@@ -129,7 +128,6 @@ export function useTransactions() {
 
     setLoading(true);
 
-    // 1. Categories listener
     const catsRef = collection(db, 'users', user.uid, 'categories');
     const unsubCats = onSnapshot(catsRef, (snapshot) => {
       const catsList: Category[] = [];
@@ -145,7 +143,6 @@ export function useTransactions() {
       }
     });
 
-    // 2. Transactions listener
     const txRef = collection(db, 'users', user.uid, 'transactions');
     const q = query(txRef, orderBy('date', 'desc'));
     const unsubTx = onSnapshot(
@@ -304,7 +301,7 @@ export function useTransactions() {
     }
   };
 
-  /** Number of transactions that reference a category — such categories can't be deleted. */
+  /** Number of transactions that reference a category - such categories can't be deleted. */
   const getCategoryUsage = (id: string) => transactions.filter((t) => t.categoryId === id).length;
 
   const deleteCategory = async (id: string) => {

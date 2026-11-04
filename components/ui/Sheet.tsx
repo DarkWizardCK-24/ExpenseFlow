@@ -45,7 +45,6 @@ export const Sheet: React.FC<SheetProps> = ({
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center md:p-4">
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -56,7 +55,6 @@ export const Sheet: React.FC<SheetProps> = ({
             className="fixed inset-0 bg-emerald-950/40 backdrop-blur-sm"
           />
 
-          {/* Sheet / Dialog container */}
           <motion.div
             role="dialog"
             aria-modal="true"
@@ -68,12 +66,10 @@ export const Sheet: React.FC<SheetProps> = ({
             transition={{ type: 'spring', damping: 30, stiffness: 320 }}
             className={`relative w-full ${maxWidth} bg-white rounded-t-[28px] md:rounded-3xl shadow-2xl border border-emerald-100 flex flex-col max-h-[92vh] z-10 overflow-hidden`}
           >
-            {/* Mobile drag handle */}
             <div className="md:hidden flex justify-center pt-3 pb-1" aria-hidden="true">
               <div className="w-10 h-1.5 rounded-full bg-slate-200" />
             </div>
 
-            {/* Header */}
             <div className="flex items-start justify-between gap-4 px-6 py-4 border-b border-slate-100">
               <div className="min-w-0">
                 <h3 id={titleId} className="text-base sm:text-lg font-semibold tracking-tight text-[#0b3b2e]">
@@ -95,7 +91,6 @@ export const Sheet: React.FC<SheetProps> = ({
               </button>
             </div>
 
-            {/* Content body */}
             <div className="px-6 py-5 overflow-y-auto overscroll-contain">{children}</div>
           </motion.div>
         </div>
